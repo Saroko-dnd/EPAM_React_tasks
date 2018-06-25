@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import NewsList from '../../reusableComponents/NewsList';
+import newsAppConfig from '../../configFiles/newsAppConfig';
 
 class Main extends React.Component {
     render() {
@@ -19,19 +20,35 @@ class Main extends React.Component {
                             <section className="row">
                                 <NewsList
                                     className="col-xl-3 col-lg-4 col-md-6"
-                                    newsApiLink="https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=1&apiKey=e99a027c252b468ab4c0d3d8872f4cfc"
+                                    newsApiLink={`${
+                                        newsAppConfig.apiBaseLink
+                                    }top-headlines?country=us&pageSize=5&page=1&apiKey=${
+                                        newsAppConfig.apiToken
+                                    }`}
                                 />
                                 <NewsList
                                     className="col-xl-3 col-lg-4 col-md-6"
-                                    newsApiLink="https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=2&apiKey=e99a027c252b468ab4c0d3d8872f4cfc"
+                                    newsApiLink={`${
+                                        newsAppConfig.apiBaseLink
+                                    }top-headlines?country=us&pageSize=5&page=2&apiKey=${
+                                        newsAppConfig.apiToken
+                                    }`}
                                 />
                                 <NewsList
                                     className="col-xl-3 col-lg-4 col-md-6"
-                                    newsApiLink="https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=3&apiKey=e99a027c252b468ab4c0d3d8872f4cfc"
+                                    newsApiLink={`${
+                                        newsAppConfig.apiBaseLink
+                                    }top-headlines?country=us&pageSize=5&page=3&apiKey=${
+                                        newsAppConfig.apiToken
+                                    }`}
                                 />
                                 <NewsList
                                     className="col-xl-3 col-lg-4 col-md-6"
-                                    newsApiLink="https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=4&apiKey=e99a027c252b468ab4c0d3d8872f4cfc"
+                                    newsApiLink={`${
+                                        newsAppConfig.apiBaseLink
+                                    }top-headlines?country=us&pageSize=5&page=4&apiKey=${
+                                        newsAppConfig.apiToken
+                                    }`}
                                 />
                             </section>
                         </main>
