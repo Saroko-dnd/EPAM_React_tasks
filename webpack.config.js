@@ -5,7 +5,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: ['babel-polyfill', './src/index.js'],
+    resolve: { extensions: ['.js', '.jsx'] },
+    entry: ['babel-polyfill', './src/index.jsx'],
     devServer: {
         contentBase: './dist',
         open: true,
@@ -35,7 +36,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: [
                     { loader: 'babel-loader' },

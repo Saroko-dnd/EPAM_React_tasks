@@ -9,7 +9,7 @@ const Header = () => (
     <header className="site-header d-flex align-items-center flex-column">
         <header className="d-flex align-items-center">
             <span>
-                <NewsIcon height="150" width="150" />
+                <NewsIcon height={150} width={150} />
             </span>
             News from all over the world
         </header>

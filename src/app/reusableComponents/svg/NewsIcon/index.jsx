@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './NewsIcon.scss';
 
@@ -80,5 +81,15 @@ const NewsIcon = props => (
         />
     </svg>
 );
+
+NewsIcon.propTypes = {
+    height: PropTypes.number,
+    width: PropTypes.number,
+};
+
+NewsIcon.defaultProps = {
+    height: 150,
+    width: 150,
+};
 
 export default NewsIcon;

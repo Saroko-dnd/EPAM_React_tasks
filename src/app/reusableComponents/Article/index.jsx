@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { NavLink } from 'react-router-dom';
 
 import './Article.scss';
@@ -10,10 +11,9 @@ const Article = props => (
     </article>
 );
 
-/* <NavLink
-className=""
-to={props.linkToDetails}
-exact
-/> */
+Article.propTypes = {
+    title: PropTypes.string.isRequired,
+    linkToDetails: PropTypes.string.isRequired,
+};
 
 export default Article;

@@ -4,6 +4,8 @@
         "no-unused-vars": ["error", { "varsIgnorePattern": "ESLintIgnore" }],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
         "max-len": [1, 80, 2, { "ignoreComments": true }],
         "linebreak-style": ["error", "unix"],
         "indent": ["error", 4],
@@ -13,7 +15,7 @@
             { "functions": false, "classes": true }
         ]
     },
-    "extends": ["airbnb-base"],
+    "extends": ["airbnb"],
     "plugins": ["jsx-a11y", "import", "react"],
     "env": {
         "browser": true,
