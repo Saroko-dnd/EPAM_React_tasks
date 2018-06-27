@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NewsList from '../../reusableComponents/NewsList';
 import newsAppConfig from '../../configFiles/';
 
-const Main = props => (
+const RouteContentContainer = props => (
     <Switch>
         <Route
             exact
@@ -79,12 +79,12 @@ const Main = props => (
     </Switch>
 );
 
-Main.propTypes = {
+RouteContentContainer.propTypes = {
     className: PropTypes.string,
 };
 
-Main.defaultProps = {
+RouteContentContainer.defaultProps = {
     className: '',
 };
 
-export default Main;
+export default RouteContentContainer;
