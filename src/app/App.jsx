@@ -1,4 +1,5 @@
 import React from 'react';
+import 'scss-reset-by-igor-saroko';
 
 import Main from './applicationComponents/Main';
 import Header from './applicationComponents/Header';
