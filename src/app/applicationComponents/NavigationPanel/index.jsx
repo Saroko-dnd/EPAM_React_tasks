@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import createUuidv4 from '../../helpers/createUuidv4';
 
-const Navigation = props => (
+const NavigationPanel = props => (
     <nav
         className={`navigation-panel nav nav-pills d-flex justify-content-around ${
             props.className
@@ -23,13 +23,13 @@ const Navigation = props => (
     </nav>
 );
 
-Navigation.propTypes = {
+NavigationPanel.propTypes = {
     navigationLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
     className: PropTypes.string,
 };
 
-Navigation.defaultProps = {
+NavigationPanel.defaultProps = {
     className: '',
 };
 
-export default Navigation;
+export default NavigationPanel;
