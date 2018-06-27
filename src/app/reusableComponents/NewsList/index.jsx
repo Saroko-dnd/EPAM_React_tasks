@@ -8,16 +8,9 @@ import createUuidv4 from '../../helpers/createUuidv4';
 import './scss/index.scss';
 
 class NewsList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dataLoaded: false,
-        };
-    }
-
-    /* state = {
+    state = {
         dataLoaded: false,
-    }; */
+    };
 
     componentDidMount() {
         fetch(this.props.newsApiLink)

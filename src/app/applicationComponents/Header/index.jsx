@@ -14,36 +14,16 @@ const Header = () => (
             News from all over the world
         </header>
         <nav className="site-header-navigation nav nav-pills d-flex justify-content-around">
-            <NavLink
-                className="nav-item nav-link"
-                to="/"
-                exact
-                // activeStyle={{ color: 'white' }}
-            >
+            <NavLink className="nav-item nav-link" to="/" exact>
                 Top news
             </NavLink>
-            <NavLink
-                className="nav-item nav-link"
-                to="/first"
-                exact
-                // activeStyle={{ color: 'white' }}
-            >
+            <NavLink className="nav-item nav-link" to="/first" exact>
                 Ultra news
             </NavLink>
-            <NavLink
-                className="nav-item nav-link"
-                to="/second"
-                exact
-                // activeStyle={{ color: 'white' }}
-            >
+            <NavLink className="nav-item nav-link" to="/second" exact>
                 Super news
             </NavLink>
-            <NavLink
-                className="nav-item nav-link"
-                to="/third"
-                exact
-                // activeStyle={{ color: 'white' }}
-            >
+            <NavLink className="nav-item nav-link" to="/third" exact>
                 Mega news
             </NavLink>
         </nav>
