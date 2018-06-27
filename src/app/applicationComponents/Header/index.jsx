@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import NewsIcon from '../../reusableComponents/svg/NewsIcon';
+import NavigationPanel from '../Navigation';
+import newsAppConfig from '../../configFiles';
 
 import './Header.scss';
 
@@ -13,20 +14,15 @@ const Header = () => (
             </span>
             News from all over the world
         </header>
-        <nav className="site-header-navigation nav nav-pills d-flex justify-content-around">
-            <NavLink className="nav-item nav-link" to="/" exact>
-                Top news
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/first" exact>
-                Ultra news
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/second" exact>
-                Super news
-            </NavLink>
-            <NavLink className="nav-item nav-link" to="/third" exact>
-                Mega news
-            </NavLink>
-        </nav>
+        <NavigationPanel
+            className="site-header-navigation"
+            navigationLinks={[
+                newsAppConfig.navigation.homePage,
+                newsAppConfig.navigation.firstPage,
+                newsAppConfig.navigation.secondPage,
+                newsAppConfig.navigation.thirdPage,
+            ]}
+        />
     </header>
 );
 

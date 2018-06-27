@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import NewsList from '../../reusableComponents/NewsList';
-import newsAppConfig from '../../configFiles/newsAppConfig';
+import newsAppConfig from '../../configFiles/';
 
 const Main = props => (
     <Switch>
