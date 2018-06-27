@@ -2,8 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import NewsList from '../../reusableComponents/NewsList';
-import newsAppConfig from '../../configFiles/';
+import NewsColumns from '../../reusableComponents/NewsColumns';
 
 const RouteContentContainer = props => (
     <Switch>
@@ -12,40 +11,7 @@ const RouteContentContainer = props => (
             path="/"
             render={() => (
                 <main className={`${props.className} container-fluid`}>
-                    <section className="row">
-                        <NewsList
-                            className="col-xl-3 col-lg-4 col-md-6"
-                            newsApiLink={`${
-                                newsAppConfig.apiBaseLink
-                            }top-headlines?country=us&pageSize=5&page=1&apiKey=${
-                                newsAppConfig.apiToken
-                            }`}
-                        />
-                        <NewsList
-                            className="col-xl-3 col-lg-4 col-md-6"
-                            newsApiLink={`${
-                                newsAppConfig.apiBaseLink
-                            }top-headlines?country=us&pageSize=5&page=2&apiKey=${
-                                newsAppConfig.apiToken
-                            }`}
-                        />
-                        <NewsList
-                            className="col-xl-3 col-lg-4 col-md-6"
-                            newsApiLink={`${
-                                newsAppConfig.apiBaseLink
-                            }top-headlines?country=us&pageSize=5&page=3&apiKey=${
-                                newsAppConfig.apiToken
-                            }`}
-                        />
-                        <NewsList
-                            className="col-xl-3 col-lg-4 col-md-6"
-                            newsApiLink={`${
-                                newsAppConfig.apiBaseLink
-                            }top-headlines?country=us&pageSize=5&page=4&apiKey=${
-                                newsAppConfig.apiToken
-                            }`}
-                        />
-                    </section>
+                    <NewsColumns />
                 </main>
             )}
         />

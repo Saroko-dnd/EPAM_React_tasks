@@ -7,7 +7,7 @@ import createUuidv4 from '../../helpers/createUuidv4';
 
 import './scss/index.scss';
 
-class NewsList extends React.Component {
+class ArticlesList extends React.Component {
     state = {
         dataLoaded: false,
     };
@@ -44,13 +44,13 @@ class NewsList extends React.Component {
     }
 }
 
-NewsList.propTypes = {
+ArticlesList.propTypes = {
     newsApiLink: PropTypes.string.isRequired,
     className: PropTypes.string,
 };
 
-NewsList.defaultProps = {
+ArticlesList.defaultProps = {
     className: '',
 };
 
-export default NewsList;
+export default ArticlesList;
