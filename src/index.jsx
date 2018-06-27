@@ -11,5 +11,5 @@ render(
     <BrowserRouter>
         <App />
     </BrowserRouter>,
-    document.getElementById('reactApp'),
+    document.getElementById('react-app'),
 );
