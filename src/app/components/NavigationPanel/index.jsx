@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 import createUuidv4 from '../../utils/createUuidv4';
 
-const NavigationPanel = props => (
+const NavigationPanel = ({ navigationLinks, className }) => (
     <nav
         className={`navigation-panel nav nav-pills d-flex justify-content-around ${
-            props.className
+            className
         }`}
     >
-        {props.navigationLinks.map(navLinkInfo => (
+        {navigationLinks.map(navLinkInfo => (
             <NavLink
                 key={createUuidv4()}
                 className="nav-item nav-link"

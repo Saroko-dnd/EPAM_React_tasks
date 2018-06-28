@@ -15,9 +15,8 @@ class NewsColumns extends React.Component {
     };
 
     componentDidMount() {
-        const newsApiRequestLink = `${
-            this.props.newsApiLink
-        }top-headlines?country=us&apiKey=${this.props.newsApiToken}`;
+        const { newsApiToken, newsApiLink } = this.props;
+        const newsApiRequestLink = `${newsApiLink}top-headlines?country=us&apiKey=${newsApiToken}`;
         let sliceStartIndex;
         let sliceEndIndex;
 

@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import NewsColumns from '../NewsColumns';
 import constants from '../../constants';
 
-const RouteContentContainer = props => (
+const RouteContentContainer = ({ className }) => (
     <Switch>
         <Route
             exact
             path="/"
             render={() => (
-                <main className={`${props.className} container-fluid`}>
+                <main className={`${className} container-fluid`}>
                     <NewsColumns
                         newsApiLink={constants.apiBaseLink}
                         newsApiToken={constants.apiToken}

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './Article.scss';
 
-const Article = props => (
+const Article = ({ title, linkToDetails }) => (
     <article className="news-article d-flex align-items-center flex-column">
-        <h2>{props.title}</h2>
-        <a href={props.linkToDetails}>read more</a>
+        <h2>{title}</h2>
+        <a href={linkToDetails}>read more</a>
     </article>
 );
 
