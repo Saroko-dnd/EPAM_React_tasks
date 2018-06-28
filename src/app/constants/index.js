@@ -8,6 +8,10 @@ const newsAppConfig = {
         secondPage: { destination: '/second', title: 'Super news' },
         thirdPage: { destination: '/third', title: 'Mega news' },
     },
+
+    colors: {
+        green: '#009900',
+    },
 };
 
 export default newsAppConfig;

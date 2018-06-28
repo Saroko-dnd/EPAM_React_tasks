@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { RingLoader } from 'react-spinners';
 
 import ArticlesList from '../../components/ArticlesList';
+import constants from '../../constants';
+import './NewsColumns.scss';
 
 class NewsColumns extends React.Component {
     constructor(props) {
@@ -43,12 +46,15 @@ class NewsColumns extends React.Component {
 
     render() {
         if (this.state.dataLoaded) {
-            return <section className="row">{this.columns}</section>;
+            return <section className="news-columns row">{this.columns}</section>;
         }
 
         return (
-            <section className="text-center">
-                <h2 className="">Loading news...</h2>
+            <section className="news-columns">
+                <header className="loading-header d-flex flex-column align-items-center">
+                    <RingLoader color={constants.colors.green} size={150} />
+                    <h2 className="">Loading news...</h2>
+                </header>
             </section>
         );
     }
