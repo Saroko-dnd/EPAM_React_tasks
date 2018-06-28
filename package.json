@@ -51,6 +51,7 @@
         "react-dom": "^16.4.0",
         "react-icons": "^2.2.7",
         "react-router-dom": "^4.3.1",
+        "react-svg-icons-by-igor-saroko": "^1.0.3",
         "scss-reset-by-igor-saroko": "^1.0.0"
     }
 }

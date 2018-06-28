@@ -1,6 +1,6 @@
 import React from 'react';
+import { NewsIcon } from 'react-svg-icons-by-igor-saroko';
 
-import NewsIcon from '../NewsIcon';
 import NavigationPanel from '../NavigationPanel';
 import newsAppConfig from '../../constants';
 
