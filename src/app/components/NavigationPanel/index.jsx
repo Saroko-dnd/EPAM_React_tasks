@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import createUuidv4 from '../../helpers/createUuidv4';
+import createUuidv4 from '../../utils/createUuidv4';
 
 const NavigationPanel = props => (
     <nav

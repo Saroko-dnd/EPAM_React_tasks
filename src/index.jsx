@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/scss/bootstrap.scss';
 
 import './assets/scss/index.scss';
-import App from './app/App';
+import App from './app';
 
 render(
     <BrowserRouter>

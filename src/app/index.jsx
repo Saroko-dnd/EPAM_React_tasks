@@ -1,9 +1,9 @@
 import React from 'react';
 import 'scss-reset-by-igor-saroko';
 
-import Main from './applicationComponents/Main';
-import Header from './applicationComponents/Header';
-import Footer from './applicationComponents/Footer';
+import Main from './containers/RouteContentContainer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import './App.scss';
 

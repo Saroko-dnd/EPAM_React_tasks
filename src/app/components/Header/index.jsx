@@ -2,7 +2,7 @@ import React from 'react';
 
 import NewsIcon from '../../reusableComponents/svg/NewsIcon';
 import NavigationPanel from '../NavigationPanel';
-import newsAppConfig from '../../configFiles';
+import newsAppConfig from '../../constants';
 
 import './Header.scss';
 

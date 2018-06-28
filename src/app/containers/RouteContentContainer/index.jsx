@@ -2,7 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import NewsColumns from '../../reusableComponents/NewsColumns';
+import NewsColumns from '../NewsColumns';
+import constants from '../../constants';
 
 const RouteContentContainer = props => (
     <Switch>
@@ -11,7 +12,10 @@ const RouteContentContainer = props => (
             path="/"
             render={() => (
                 <main className={`${props.className} container-fluid`}>
-                    <NewsColumns />
+                    <NewsColumns
+                        newsApiLink={constants.apiBaseLink}
+                        newsApiToken={constants.apiToken}
+                    />
                 </main>
             )}
         />
