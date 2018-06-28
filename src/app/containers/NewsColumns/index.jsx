@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ArticlesList from '../../components/ArticlesList';
-import createUuidv4 from '../../utils/createUuidv4';
 
 class NewsColumns extends React.Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class NewsColumns extends React.Component {
 
                     this.columns.push(<ArticlesList
                         className="col-xl-3 col-lg-4 col-md-6"
-                        key={createUuidv4()}
+                        key={newsInfo.articles[sliceStartIndex].url}
                         articles={newsInfo.articles.slice(
                             sliceStartIndex,
                             sliceEndIndex,
@@ -49,8 +48,8 @@ class NewsColumns extends React.Component {
         }
 
         return (
-            <section className="row">
-                <h2>Loading news...</h2>
+            <section className="text-center">
+                <h2 className="">Loading news...</h2>
             </section>
         );
     }
