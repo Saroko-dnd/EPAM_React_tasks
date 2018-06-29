@@ -2,17 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import createUuidv4 from '../../utils/createUuidv4';
-
 const NavigationPanel = ({ navigationLinks, className }) => (
     <nav
-        className={`navigation-panel nav nav-pills d-flex justify-content-around ${
-            className
-        }`}
+        className={`navigation-panel nav nav-pills d-flex justify-content-around ${className}`}
     >
         {navigationLinks.map(navLinkInfo => (
             <NavLink
-                key={createUuidv4()}
+                key={navLinkInfo.id}
                 className="nav-item nav-link"
                 to={navLinkInfo.destination}
                 exact

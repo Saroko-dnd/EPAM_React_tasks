@@ -3,10 +3,22 @@ const newsAppConfig = {
     apiBaseLink: 'https://newsapi.org/v2/',
 
     navigation: {
-        homePage: { destination: '/', title: 'Top news' },
-        firstPage: { destination: '/first', title: 'Ultra news' },
-        secondPage: { destination: '/second', title: 'Super news' },
-        thirdPage: { destination: '/third', title: 'Mega news' },
+        homePage: { destination: '/', title: 'Top news', id: 'nav-link-1' },
+        firstPage: {
+            destination: '/first',
+            title: 'Ultra news',
+            id: 'nav-link-2',
+        },
+        secondPage: {
+            destination: '/second',
+            title: 'Super news',
+            id: 'nav-link-3',
+        },
+        thirdPage: {
+            destination: '/third',
+            title: 'Mega news',
+            id: 'nav-link-4',
+        },
     },
 
     colors: {
