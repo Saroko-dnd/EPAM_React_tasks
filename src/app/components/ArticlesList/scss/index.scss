@@ -1,0 +1,13 @@
+@import "variables";
+
+.news-list {
+  > * {
+    &:nth-child(odd) {
+      color: $odd-news-list-item-color;
+    }
+
+    &:nth-child(even) {
+      color: $even-news-list-item-color;
+    }
+  }
+}
