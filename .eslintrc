@@ -8,7 +8,7 @@
         "react/jsx-indent-props": "off",
         "max-len": [1, 80, 2, { "ignoreComments": true }],
         "linebreak-style": ["error", "unix"],
-        "indent": ["error", 4],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
         "no-param-reassign": ["error", { "props": false }],
         "no-use-before-define": [
             "error",

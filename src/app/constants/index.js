@@ -1,4 +1,4 @@
-const newsAppConfig = {
+const newsAppConfig = Object.freeze({
     apiToken: 'e99a027c252b468ab4c0d3d8872f4cfc',
     apiBaseLink: 'https://newsapi.org/v2/',
 
@@ -24,6 +24,16 @@ const newsAppConfig = {
     colors: {
         green: '#009900',
     },
-};
+
+    initialState: {
+        articles: [],
+        newsIsLoading: false,
+    },
+
+    actions: {
+        NEWS_IS_LOADING: 'NEWS_IS_LOADING',
+        NEWS_UPLOADED: 'NEWS_UPLOADED',
+    },
+});
 
 export default newsAppConfig;
