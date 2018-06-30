@@ -15,8 +15,8 @@
             { "functions": false, "classes": true }
         ]
     },
-    "extends": ["airbnb"],
-    "plugins": ["jsx-a11y", "import", "react"],
+    "extends": ["airbnb", "plugin:react-redux/recommended"],
+    "plugins": ["jsx-a11y", "import", "react", "react-redux"],
     "env": {
         "browser": true,
         "node": true,
