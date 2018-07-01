@@ -1,0 +1,8 @@
+$color-red: rgb(241, 15, 15);
+$loading-font-color: $color-red;
+
+.loading-indicator {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $loading-font-color;
+}

@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RingLoader } from 'react-spinners';
 
-import constants from '../../constants';
-import './NewsColumns.scss';
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 class NewsColumns extends React.Component {
     componentDidMount() {
@@ -23,10 +21,7 @@ class NewsColumns extends React.Component {
 
         return (
             <section className="news-columns">
-                <header className="loading-header d-flex flex-column align-items-center">
-                    <RingLoader color={constants.colors.green} size={150} />
-                    <h2 className="">Loading news...</h2>
-                </header>
+                <LoadingIndicator message="Loading news..." />
             </section>
         );
     }
