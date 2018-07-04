@@ -1,6 +1,6 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Switch, Route } from 'react-router-dom';
 
 import NewsColumns from '../NewsColumns';
 import constants from '../../constants';

@@ -29,6 +29,7 @@
         "eslint-plugin-import": "^2.11.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.9.1",
+        "eslint-plugin-react-redux": "^2.3.0",
         "file-loader": "^1.1.11",
         "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.2.0",
@@ -45,15 +46,21 @@
     "dependencies": {
         "babel-polyfill": "^6.26.0",
         "bootstrap": "^4.1.1",
+        "connected-react-router": "^4.3.0",
         "font-awesome": "^4.7.0",
+        "history": "^4.7.2",
         "lodash": "^4.17.10",
         "prop-types": "^15.6.2",
         "react": "^16.4.0",
         "react-dom": "^16.4.0",
+        "react-extra-prop-types": "^0.3.1",
         "react-icons": "^2.2.7",
+        "react-redux": "^5.0.7",
         "react-router-dom": "^4.3.1",
         "react-spinners": "^0.3.2",
         "react-svg-icons-by-igor-saroko": "^1.0.3",
+        "redux": "^4.0.0",
+        "redux-thunk": "^2.3.0",
         "scss-reset-by-igor-saroko": "^1.0.0"
     }
 }
