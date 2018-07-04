@@ -3,7 +3,6 @@ import Thunk from 'redux-thunk';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-// import { BrowserRouter } from 'react-router-dom';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import {
     connectRouter,
@@ -22,10 +21,8 @@ const history = createBrowserHistory();
 
 const store = createStore(
     connectRouter(history)(combineReducers(reducers)),
-    // combineReducers(reducers),
     constants.initialState,
     compose(applyMiddleware(routerMiddleware(history), Thunk)),
-    // applyMiddleware(Thunk),
 );
 
 render(

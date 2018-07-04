@@ -1,9 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
+import ArticlesList from '../../components/ArticlesList';
 import LoadingIndicator from '../../components/LoadingIndicator';
 
 class NewsColumns extends React.Component {
+    static createColumnsFromNews(articles) {
+        const groupedArticles = _.chunk(articles, 5);
+        const columns = [];
+
+        for (let column = 0; column < groupedArticles.length; column += 1) {
+            columns.push(<ArticlesList
+                className="col-xl-3 col-lg-4 col-md-6"
+                key={groupedArticles[column][0].url}
+                articles={groupedArticles[column]}
+            />);
+        }
+
+        return columns;
+    }
+
     componentDidMount() {
         const { newsApiToken, newsApiLink } = this.props;
         const newsApiRequestLink = `${newsApiLink}top-headlines?country=us&apiKey=${newsApiToken}`;
