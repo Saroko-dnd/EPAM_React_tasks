@@ -11,6 +11,7 @@ const NavigationPanel = ({ navigationLinks, className }) => (
                 key={navLinkInfo.id}
                 className="nav-item nav-link"
                 to={navLinkInfo.destination}
+                isActive={navLinkInfo.isActive}
                 exact
             >
                 {navLinkInfo.title}

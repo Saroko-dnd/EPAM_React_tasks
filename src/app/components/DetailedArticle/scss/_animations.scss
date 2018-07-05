@@ -1,0 +1,19 @@
+@mixin fadeinAnimation($delay) {
+  position: relative;
+  opacity: 0;
+  animation-delay: $delay;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}

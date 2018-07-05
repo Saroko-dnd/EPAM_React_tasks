@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./animations";
+
+.detailed-news-article {
+  font-weight: bold;
+
+  .title {
+    @include fadeinAnimation(0s);
+    font-size: 2.5rem;
+    color: $title-font-color;
+  }
+
+  .photo {
+    @include fadeinAnimation(1s);
+    animation-fill-mode: forwards;
+  }
+
+  .description {
+    @include fadeinAnimation(2s);
+    font-size: 2rem;
+    color: $description-font-color;
+  }
+
+  .url {
+    @include fadeinAnimation(3s);
+    font-size: 3rem;
+  }
+
+  footer {
+    @include fadeinAnimation(4s);
+    color: $footer-font-color;
+  }
+}

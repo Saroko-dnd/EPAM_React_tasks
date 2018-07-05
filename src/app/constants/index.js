@@ -1,23 +1,38 @@
+import customPropTypes from './customPropTypes';
+
 const newsAppConfig = Object.freeze({
     apiToken: 'e99a027c252b468ab4c0d3d8872f4cfc',
     apiBaseLink: 'https://newsapi.org/v2/',
 
     navigation: {
-        homePage: { destination: '/', title: 'Top news', id: 'nav-link-1' },
+        homePage: {
+            destination: '/',
+            title: 'Top news',
+            id: 'nav-link-1',
+            isActive: (match, location) =>
+                match || /\/details\/\S$/gi.test(location.pathname),
+        },
         firstPage: {
             destination: '/first',
             title: 'Ultra news',
             id: 'nav-link-2',
+            isActive: null,
         },
         secondPage: {
             destination: '/second',
             title: 'Super news',
             id: 'nav-link-3',
+            isActive: null,
         },
         thirdPage: {
             destination: '/third',
             title: 'Mega news',
             id: 'nav-link-4',
+            isActive: null,
+        },
+        newsDetails: {
+            destination: '/details/',
+            id: 'nav-link-5',
         },
     },
 
@@ -27,13 +42,17 @@ const newsAppConfig = Object.freeze({
 
     initialState: {
         articles: [],
+        selectedArticle: null,
         newsIsLoading: false,
     },
 
     actions: {
         NEWS_IS_LOADING: 'NEWS_IS_LOADING',
         NEWS_UPLOADED: 'NEWS_UPLOADED',
+        ARTICLE_SELECTED: 'ARTICLE_SELECTED',
     },
+
+    customPropTypes,
 });
 
 export default newsAppConfig;

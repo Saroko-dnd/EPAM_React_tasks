@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 import NewsColumns from '../NewsColumns';
+import SelectedArticle from '../SelectedArticle';
 import constants from '../../constants';
 
 const RouteContentContainer = ({ className }) => (
@@ -46,6 +47,7 @@ const RouteContentContainer = ({ className }) => (
                 </main>
             )}
         />
+        <Route exact path="/details/:top_news_id" component={SelectedArticle} />
     </Switch>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Article from '../../components/Article';
+import Article from '../Article';
 
 import './scss/index.scss';
 
@@ -10,7 +10,7 @@ const ArticlesList = ({ articles, className }) => {
         <Article
             key={article.url}
             title={article.title}
-            linkToDetails={article.url}
+            articleId={article.id}
         />
     ));
 

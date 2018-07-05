@@ -1,18 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
-import './Article.scss';
+import constants from '../../constants';
 
-const Article = ({ title, linkToDetails }) => (
+import './scss/Article.scss';
+
+const Article = ({ title, articleId }) => (
     <article className="news-article d-flex align-items-center flex-column">
         <h2>{title}</h2>
-        <a href={linkToDetails}>read more</a>
+        <NavLink
+            to={constants.navigation.newsDetails.destination + articleId}
+            exact
+        >
+            read more
+        </NavLink>
     </article>
 );
 
 Article.propTypes = {
     title: PropTypes.string.isRequired,
-    linkToDetails: PropTypes.string.isRequired,
+    articleId: PropTypes.string.isRequired,
 };
 
 export default Article;
