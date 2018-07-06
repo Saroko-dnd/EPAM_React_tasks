@@ -44,7 +44,6 @@ const newsAppConfig = Object.freeze({
     initialState: {
         articles: [],
         articlesRelatedToSelected: [],
-        allSelectedArticles: [],
         selectedArticle: null,
         newsIsLoading: false,
     },
@@ -54,7 +53,6 @@ const newsAppConfig = Object.freeze({
         TOP_NEWS_UPLOADED: 'TOP_NEWS_UPLOADED',
         RELATED_NEWS_UPLOADED: 'RELATED_NEWS_UPLOADED',
         ARTICLE_SELECTED: 'ARTICLE_SELECTED',
-        SAVE_SELECTED_ARTICLE: 'SAVE_SELECTED_ARTICLE',
     },
 
     customPropTypes,
