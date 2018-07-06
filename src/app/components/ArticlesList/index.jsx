@@ -5,12 +5,15 @@ import Article from '../Article';
 
 import './scss/index.scss';
 
-const ArticlesList = ({ title, articles, className }) => {
+const ArticlesList = ({
+    title, articles, className, linksToDetails,
+}) => {
     const arrayOfNews = articles.map(article => (
         <Article
             key={article.url}
             title={article.title}
-            articleId={article.id}
+            articleId={linksToDetails ? article.id : null}
+            url={linksToDetails ? null : article.url}
         />
     ));
 
@@ -24,6 +27,7 @@ const ArticlesList = ({ title, articles, className }) => {
 
 ArticlesList.propTypes = {
     articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+    linksToDetails: PropTypes.bool.isRequired,
     className: PropTypes.string,
     title: PropTypes.string,
 };

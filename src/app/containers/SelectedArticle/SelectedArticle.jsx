@@ -7,16 +7,7 @@ import constants from '../../constants';
 
 class SelectedArticle extends React.Component {
     componentDidMount() {
-        this.lastLocationUrl = this.props.match.params.top_news_id;
-        console.log('SelectedArticle did mount');
         this.props.selectArticle();
-    }
-
-    componentDidUpdate() {
-        if (this.lastLocationUrl !== this.props.match.params.top_news_id) {
-            this.props.selectArticle();
-            this.lastLocationUrl = this.props.match.params.top_news_id;
-        }
     }
 
     render() {
@@ -26,6 +17,7 @@ class SelectedArticle extends React.Component {
                 <ArticlesList
                     title="Related news"
                     articles={this.props.relatedArticles}
+                    linksToDetails={false}
                 />
             </section>
         );
@@ -33,11 +25,6 @@ class SelectedArticle extends React.Component {
 }
 
 SelectedArticle.propTypes = {
-    match: PropTypes.shape({
-        params: PropTypes.shape({
-            top_news_id: PropTypes.string,
-        }).isRequired,
-    }).isRequired,
     selectArticle: PropTypes.func.isRequired,
     selectedArticle: constants.customPropTypes.article,
     relatedArticles: PropTypes.arrayOf(constants.customPropTypes.article),

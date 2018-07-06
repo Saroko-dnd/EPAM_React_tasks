@@ -6,21 +6,43 @@ import constants from '../../constants';
 
 import './scss/Article.scss';
 
-const Article = ({ title, articleId }) => (
-    <article className="news-article d-flex align-items-center flex-column">
-        <h2>{title}</h2>
-        <NavLink
-            to={constants.navigation.newsDetails.destination + articleId}
-            exact
-        >
-            read more
-        </NavLink>
-    </article>
-);
+const Article = ({ title, articleId, url }) => {
+    let detailsLink;
+    let sourceLink;
+
+    if (articleId) {
+        detailsLink = (
+            <NavLink
+                to={constants.navigation.newsDetails.destination + articleId}
+                exact
+            >
+                read more
+            </NavLink>
+        );
+    }
+
+    if (url) {
+        sourceLink = <a href={url}>read source</a>;
+    }
+
+    return (
+        <article className="news-article d-flex align-items-center flex-column">
+            <h2>{title}</h2>
+            {detailsLink}
+            {sourceLink}
+        </article>
+    );
+};
 
 Article.propTypes = {
     title: PropTypes.string.isRequired,
-    articleId: PropTypes.string.isRequired,
+    articleId: PropTypes.string,
+    url: PropTypes.string,
+};
+
+Article.defaultProps = {
+    articleId: null,
+    url: null,
 };
 
 export default Article;

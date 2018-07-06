@@ -6,7 +6,6 @@ import './scss/DetailedArticle.scss';
 
 const DetailedArticle = ({ article }) => (
     <article className="detailed-news-article d-flex align-items-center flex-column">
-        <p>{Date.now()}</p>
         <h2 className="title">{article.title}</h2>
         <img className="photo" src={article.urlToImage} alt=":(" />
         <p className="description">{article.description}</p>
