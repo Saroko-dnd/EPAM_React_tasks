@@ -1,6 +1,12 @@
-import newsIsLoading from './newsIsLoading';
-import newsDownloaded from './newsDownloaded';
+import { createActions } from 'redux-actions';
+
 import createUuidv4 from '../utils/createUuidv4';
+import constants from '../constants';
+
+const { newsIsLoading, newsUploaded } = createActions({
+    [constants.actions.NEWS_IS_LOADING]: boolValue => boolValue,
+    [constants.actions.NEWS_UPLOADED]: newArticles => newArticles,
+});
 
 function loadNews(apiRequestLink) {
     return (dispatch) => {
@@ -14,9 +20,9 @@ function loadNews(apiRequestLink) {
                 });
 
                 dispatch(newsIsLoading(false));
-                dispatch(newsDownloaded(newsInfo.articles));
+                dispatch(newsUploaded(newsInfo.articles));
             });
     };
 }
 
-export default loadNews;
+export default { newsIsLoading, newsUploaded, loadNews };

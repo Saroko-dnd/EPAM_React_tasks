@@ -1,12 +1,11 @@
+import { handleAction } from 'redux-actions';
+
 import constants from '../constants';
 
-function selectedArticle(state = null, action) {
-    switch (action.type) {
-        case constants.actions.ARTICLE_SELECTED:
-            return action.selectedArticle;
-        default:
-            return state;
-    }
-}
+const selectedArticle = handleAction(
+    constants.actions.ARTICLE_SELECTED,
+    (state, action) => action.payload,
+    null,
+);
 
 export default selectedArticle;

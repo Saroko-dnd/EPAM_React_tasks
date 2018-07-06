@@ -1,12 +1,11 @@
+import { handleAction } from 'redux-actions';
+
 import constants from '../constants';
 
-function articles(state = [], action) {
-    switch (action.type) {
-        case constants.actions.NEWS_UPLOADED:
-            return action.articles;
-        default:
-            return state;
-    }
-}
+const articles = handleAction(
+    constants.actions.NEWS_UPLOADED,
+    (state, action) => action.payload,
+    [],
+);
 
 export default articles;

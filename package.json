@@ -61,6 +61,7 @@
         "react-spinners": "^0.3.2",
         "react-svg-icons-by-igor-saroko": "^1.0.3",
         "redux": "^4.0.0",
+        "redux-actions": "^2.4.0",
         "redux-thunk": "^2.3.0",
         "scss-reset-by-igor-saroko": "^1.0.0"
     }

@@ -1,12 +1,14 @@
+import { createAction } from 'redux-actions';
+
 import constants from '../constants';
+
+const selectNewArticle = createAction(constants.actions.ARTICLE_SELECTED);
 
 function articleSelected(selectedArticleId) {
     return (dispatch, getState) => {
-        dispatch({
-            type: constants.actions.ARTICLE_SELECTED,
-            selectedArticle: getState().articles.find(article => article.id === selectedArticleId),
-        });
+        const selectedArticle = getState().articles.find(article => article.id === selectedArticleId);
+        dispatch(selectNewArticle(selectedArticle));
     };
 }
 
-export default articleSelected;
+export default { selectNewArticle, articleSelected };

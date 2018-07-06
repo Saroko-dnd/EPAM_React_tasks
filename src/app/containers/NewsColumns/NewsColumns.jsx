@@ -21,6 +21,7 @@ class NewsColumns extends React.Component {
 
         return (
             <section className="news-columns">
+                <h2>{}</h2>
                 <LoadingIndicator message="Loading news..." />
             </section>
         );
