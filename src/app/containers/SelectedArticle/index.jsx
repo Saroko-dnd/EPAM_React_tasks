@@ -5,6 +5,7 @@ import Actions from '../../actions';
 
 const mapStateToProps = state => ({
     selectedArticle: state.selectedArticle || undefined,
+    relatedArticles: state.articlesRelatedToSelected,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

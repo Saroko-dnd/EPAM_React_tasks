@@ -14,7 +14,7 @@ const RouteContentContainer = ({ className }) => (
             render={() => (
                 <main className={`${className} container-fluid`}>
                     <NewsColumns
-                        newsApiLink={constants.apiBaseLink}
+                        newsApiLink={constants.apiTopNewsLink}
                         newsApiToken={constants.apiToken}
                     />
                 </main>
@@ -47,7 +47,11 @@ const RouteContentContainer = ({ className }) => (
                 </main>
             )}
         />
-        <Route exact path="/details/:top_news_id" component={SelectedArticle} />
+        <Route
+            exact
+            path="/details/:top_news_id"
+            component={SelectedArticle}
+        />
     </Switch>
 );
 

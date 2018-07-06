@@ -6,7 +6,7 @@ import LoadingIndicator from '../../components/LoadingIndicator';
 class NewsColumns extends React.Component {
     componentDidMount() {
         const { newsApiToken, newsApiLink } = this.props;
-        const newsApiRequestLink = `${newsApiLink}top-headlines?country=us&apiKey=${newsApiToken}`;
+        const newsApiRequestLink = `${newsApiLink}country=us&apiKey=${newsApiToken}`;
         this.props.fetchNewsData(newsApiRequestLink);
     }
 

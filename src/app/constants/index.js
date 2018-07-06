@@ -2,7 +2,8 @@ import customPropTypes from './customPropTypes';
 
 const newsAppConfig = Object.freeze({
     apiToken: 'e99a027c252b468ab4c0d3d8872f4cfc',
-    apiBaseLink: 'https://newsapi.org/v2/',
+    apiTopNewsLink: 'https://newsapi.org/v2/top-headlines?',
+    apiAnyNewsLink: 'https://newsapi.org/v2/everything?',
 
     navigation: {
         homePage: {
@@ -42,13 +43,15 @@ const newsAppConfig = Object.freeze({
 
     initialState: {
         articles: [],
+        articlesRelatedToSelected: [],
         selectedArticle: null,
         newsIsLoading: false,
     },
 
     actions: {
         NEWS_IS_LOADING: 'NEWS_IS_LOADING',
-        NEWS_UPLOADED: 'NEWS_UPLOADED',
+        TOP_NEWS_UPLOADED: 'TOP_NEWS_UPLOADED',
+        RELATED_NEWS_UPLOADED: 'RELATED_NEWS_UPLOADED',
         ARTICLE_SELECTED: 'ARTICLE_SELECTED',
     },
 

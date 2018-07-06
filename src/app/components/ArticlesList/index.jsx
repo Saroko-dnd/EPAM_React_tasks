@@ -5,7 +5,7 @@ import Article from '../Article';
 
 import './scss/index.scss';
 
-const ArticlesList = ({ articles, className }) => {
+const ArticlesList = ({ title, articles, className }) => {
     const arrayOfNews = articles.map(article => (
         <Article
             key={article.url}
@@ -14,16 +14,23 @@ const ArticlesList = ({ articles, className }) => {
         />
     ));
 
-    return <div className={`news-list ${className}`}>{arrayOfNews}</div>;
+    return (
+        <div className={`news-list ${className}`}>
+            <h2 className="title">{title}</h2>
+            {arrayOfNews}
+        </div>
+    );
 };
 
 ArticlesList.propTypes = {
     articles: PropTypes.arrayOf(PropTypes.object).isRequired,
     className: PropTypes.string,
+    title: PropTypes.string,
 };
 
 ArticlesList.defaultProps = {
     className: '',
+    title: '',
 };
 
 export default ArticlesList;
