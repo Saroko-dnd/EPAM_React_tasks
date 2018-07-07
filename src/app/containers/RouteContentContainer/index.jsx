@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 import NewsColumns from '../NewsColumns';
+import SelectedArticle from '../SelectedArticle';
 import constants from '../../constants';
 
 const RouteContentContainer = ({ className }) => (
@@ -13,7 +14,7 @@ const RouteContentContainer = ({ className }) => (
             render={() => (
                 <main className={`${className} container-fluid`}>
                     <NewsColumns
-                        newsApiLink={constants.apiBaseLink}
+                        newsApiLink={constants.apiTopNewsLink}
                         newsApiToken={constants.apiToken}
                     />
                 </main>
@@ -45,6 +46,11 @@ const RouteContentContainer = ({ className }) => (
                     <h1>Route 4</h1>
                 </main>
             )}
+        />
+        <Route
+            exact
+            path="/details/:top_news_id"
+            component={SelectedArticle}
         />
     </Switch>
 );

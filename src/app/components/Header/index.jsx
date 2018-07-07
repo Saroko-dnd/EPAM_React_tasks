@@ -4,7 +4,7 @@ import { NewsIcon } from 'react-svg-icons-by-igor-saroko';
 import NavigationPanel from '../NavigationPanel';
 import newsAppConfig from '../../constants';
 
-import './Header.scss';
+import './scss/Header.scss';
 
 const Header = () => (
     <header className="site-header d-flex align-items-center flex-column">

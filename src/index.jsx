@@ -13,7 +13,7 @@ import {
 import 'bootstrap/scss/bootstrap.scss';
 import './assets/scss/index.scss';
 
-import App from './app';
+import App from './app/App';
 import reducers from './app/reducers';
 import constants from './app/constants';
 

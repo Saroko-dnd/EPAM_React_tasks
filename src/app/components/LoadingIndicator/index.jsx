@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ExtraPropTypes from 'react-extra-prop-types';
 
 import constants from '../../constants';
-import './LoadingIndicator.scss';
+import './scss/LoadingIndicator.scss';
 
 const LoadingIndicator = ({ color, size, message }) => (
     <div className="loading-indicator d-flex flex-column align-items-center">

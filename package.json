@@ -52,6 +52,7 @@
         "lodash": "^4.17.10",
         "prop-types": "^15.6.2",
         "react": "^16.4.0",
+        "react-custom-proptypes": "^1.1.0",
         "react-dom": "^16.4.0",
         "react-extra-prop-types": "^0.3.1",
         "react-icons": "^2.2.7",
@@ -60,7 +61,9 @@
         "react-spinners": "^0.3.2",
         "react-svg-icons-by-igor-saroko": "^1.0.3",
         "redux": "^4.0.0",
+        "redux-actions": "^2.4.0",
         "redux-thunk": "^2.3.0",
+        "reselect": "^3.0.1",
         "scss-reset-by-igor-saroko": "^1.0.0"
     }
 }

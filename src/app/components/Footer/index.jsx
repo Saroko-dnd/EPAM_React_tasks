@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Footer.scss';
+import './scss/Footer.scss';
 
 const Footer = () => (
     <footer className="card site-footer d-flex align-items-center flex-column">

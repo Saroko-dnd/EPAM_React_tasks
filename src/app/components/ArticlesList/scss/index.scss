@@ -1,6 +1,11 @@
 @import "variables";
 
 .news-list {
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
   > * {
     &:nth-child(odd) {
       color: $odd-news-list-item-color;

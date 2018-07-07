@@ -2,10 +2,10 @@ import { handleAction } from 'redux-actions';
 
 import constants from '../constants';
 
-const articles = handleAction(
-    constants.actions.TOP_NEWS_UPLOADED,
+const selectedArticle = handleAction(
+    constants.actions.ARTICLE_SELECTED,
     (state, action) => action.payload,
-    [],
+    null,
 );
 
-export default articles;
+export default selectedArticle;

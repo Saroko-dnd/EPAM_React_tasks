@@ -1,5 +1,10 @@
-import loadNews from './loadNews';
-import newsIsLoading from './newsIsLoading';
-import newsDownloaded from './newsDownloaded';
+import fetchingNews from './loadNews';
+import articleSelection from './articleSelected';
 
-export default { loadNews, newsIsLoading, newsDownloaded };
+export default {
+    selectNewArticle: articleSelection.selectNewArticle,
+    articleSelected: articleSelection.articleSelected,
+    newsIsLoading: fetchingNews.newsIsLoading,
+    newsDownloaded: fetchingNews.topNewsUploaded,
+    loadNews: fetchingNews.loadNews,
+};
