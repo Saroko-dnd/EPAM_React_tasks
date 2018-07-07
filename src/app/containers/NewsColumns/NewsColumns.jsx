@@ -7,7 +7,7 @@ class NewsColumns extends React.Component {
     componentDidMount() {
         const { newsApiToken, newsApiLink } = this.props;
         const newsApiRequestLink = `${newsApiLink}country=us&apiKey=${newsApiToken}`;
-        this.props.fetchNewsData(newsApiRequestLink);
+        this.props.loadNews(newsApiRequestLink);
     }
 
     render() {
@@ -31,9 +31,9 @@ class NewsColumns extends React.Component {
 NewsColumns.propTypes = {
     newsApiLink: PropTypes.string.isRequired,
     newsApiToken: PropTypes.string.isRequired,
-    fetchNewsData: PropTypes.func.isRequired,
     columns: PropTypes.arrayOf(PropTypes.element),
     dataUploaded: PropTypes.bool,
+    loadNews: PropTypes.func.isRequired,
 };
 
 NewsColumns.defaultProps = {

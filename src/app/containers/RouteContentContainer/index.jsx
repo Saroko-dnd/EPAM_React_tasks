@@ -47,11 +47,7 @@ const RouteContentContainer = ({ className }) => (
                 </main>
             )}
         />
-        <Route
-            exact
-            path="/details/:top_news_id"
-            component={SelectedArticle}
-        />
+        <Route exact path="/details/:topNewsId" component={SelectedArticle} />
     </Switch>
 );
 
