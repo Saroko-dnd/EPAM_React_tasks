@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 
 import SelectedArticle from './SelectedArticle';
 import Actions from '../../actions';
+import selectorsForRelatedArticles from '../../selectors';
 
 const mapStateToProps = state => ({
     selectedArticle: state.selectedArticle || undefined,
-    relatedArticles: state.articlesRelatedToSelected,
+    relatedArticles: selectorsForRelatedArticles.getUniqueRelatedArticles(state),
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

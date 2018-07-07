@@ -11,7 +11,7 @@ function articleSelected(selectedArticleId, newsMustBeDownloaded = true) {
         const selectedArticle = allArticles.find(article => article.id === selectedArticleId);
         const relatedNewsUrl = `${constants.apiAnyNewsLink}q=${
             selectedArticle.title
-        }&sortBy=relevancy&apiKey=${constants.apiToken}`;
+        }&sortBy=relevancy&pageSize=30&apiKey=${constants.apiToken}`;
 
         console.log(getState().articlesRelatedToSelected);
 
