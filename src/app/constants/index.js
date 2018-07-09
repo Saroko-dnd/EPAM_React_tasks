@@ -1,5 +1,7 @@
 import customPropTypes from './customPropTypes';
 
+const selectedArticleRoute = pathname => /\/details\/\S+$/gi.test(pathname);
+
 const newsAppConfig = Object.freeze({
     apiToken: 'e99a027c252b468ab4c0d3d8872f4cfc',
     apiTopNewsLink: 'https://newsapi.org/v2/top-headlines?',
@@ -11,7 +13,7 @@ const newsAppConfig = Object.freeze({
             title: 'Top news',
             id: 'nav-link-1',
             isActive: (match, location) =>
-                match || /\/details\/\S$/gi.test(location.pathname),
+                match || selectedArticleRoute(location.pathname),
         },
         firstPage: {
             destination: '/first',
