@@ -1,5 +1,6 @@
 import React from 'react';
-import Thunk from 'redux-thunk';
+// import Thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -15,15 +16,19 @@ import './assets/scss/index.scss';
 
 import App from './app/App';
 import reducers from './app/reducers';
-import constants from './app/constants';
+import { initialState } from './app/constants';
+import sagaListeners from './app/sagas';
 
 const history = createBrowserHistory();
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     connectRouter(history)(combineReducers(reducers)),
-    constants.initialState,
-    compose(applyMiddleware(routerMiddleware(history), Thunk)),
+    initialState,
+    compose(applyMiddleware(routerMiddleware(history), sagaMiddleware)),
 );
+
+sagaMiddleware.run(sagaListeners);
 
 render(
     <Provider store={store}>

@@ -2,10 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 
-import NewsColumns from './NewsColumns';
 import actions from '../../actions';
+import NewsColumns from './NewsColumns';
 import ArticlesList from '../../components/ArticlesList';
-import constants from '../../constants';
+import { actionTypes } from '../../constants';
 
 function createColumnsFromNews(articles) {
     const groupedArticles = _.chunk(articles, 5);
@@ -26,8 +26,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchNewsData: url =>
-        dispatch(actions.loadNews(url, constants.actions.TOP_NEWS_UPLOADED)),
+    loadNews: apiUrl =>
+        dispatch(actions.loadNews(apiUrl, actionTypes.TOP_NEWS_DOWNLOADED)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsColumns);

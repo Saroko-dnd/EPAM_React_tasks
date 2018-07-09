@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-import constants from '../../constants';
+import { navigation } from '../../constants';
 
 import './scss/Article.scss';
 
@@ -12,10 +12,7 @@ const Article = ({ title, articleId, url }) => {
 
     if (articleId) {
         detailsLink = (
-            <NavLink
-                to={constants.navigation.newsDetails.destination + articleId}
-                exact
-            >
+            <NavLink to={navigation.newsDetails.destination + articleId} exact>
                 read more
             </NavLink>
         );

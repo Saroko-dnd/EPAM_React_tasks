@@ -2,7 +2,7 @@ import React from 'react';
 import { NewsIcon } from 'react-svg-icons-by-igor-saroko';
 
 import NavigationPanel from '../NavigationPanel';
-import newsAppConfig from '../../constants';
+import { navigation } from '../../constants';
 
 import './scss/Header.scss';
 
@@ -17,10 +17,10 @@ const Header = () => (
         <NavigationPanel
             className="site-header-navigation"
             navigationLinks={[
-                newsAppConfig.navigation.homePage,
-                newsAppConfig.navigation.firstPage,
-                newsAppConfig.navigation.secondPage,
-                newsAppConfig.navigation.thirdPage,
+                navigation.homePage,
+                navigation.firstPage,
+                navigation.secondPage,
+                navigation.thirdPage,
             ]}
         />
     </header>
