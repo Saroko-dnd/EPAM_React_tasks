@@ -7,48 +7,30 @@ import SelectedArticle from '../SelectedArticle';
 import { api } from '../../constants';
 
 const RouteContentContainer = ({ className }) => (
-    <Switch>
-        <Route
-            exact
-            path="/"
-            render={() => (
-                <main className={`${className} container-fluid`}>
-                    <NewsColumns
-                        newsApiLink={api.apiTopNewsLink}
-                        newsApiToken={api.apiToken}
-                    />
-                </main>
-            )}
-        />
-        <Route
-            exact
-            path="/first"
-            render={() => (
-                <main>
-                    <h1>Route 2</h1>
-                </main>
-            )}
-        />
-        <Route
-            exact
-            path="/second"
-            render={() => (
-                <main>
-                    <h1>Route 3</h1>
-                </main>
-            )}
-        />
-        <Route
-            exact
-            path="/third"
-            render={() => (
-                <main>
-                    <h1>Route 4</h1>
-                </main>
-            )}
-        />
-        <Route exact path="/details/:topNewsId" component={SelectedArticle} />
-    </Switch>
+    <main>
+        <Switch>
+            <Route
+                exact
+                path="/"
+                render={() => (
+                    <div className={`${className} container-fluid`}>
+                        <NewsColumns
+                            newsApiLink={api.apiTopNewsLink}
+                            newsApiToken={api.apiToken}
+                        />
+                    </div>
+                )}
+            />
+            <Route exact path="/first" render={() => <h1>Route 2</h1>} />
+            <Route exact path="/second" render={() => <h1>Route 3</h1>} />
+            <Route exact path="/third" render={() => <h1>Route 4</h1>} />
+            <Route
+                exact
+                path="/details/:topNewsId"
+                component={SelectedArticle}
+            />
+        </Switch>
+    </main>
 );
 
 RouteContentContainer.propTypes = {
