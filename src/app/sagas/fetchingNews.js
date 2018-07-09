@@ -24,7 +24,7 @@ function* loadRelatedNews(action) {
         loadNews,
         actions.loadNews(
             relatedNewsUrl,
-            constants.actions.RELATED_NEWS_UPLOADED,
+            constants.actions.RELATED_NEWS_DOWNLOADED,
         ),
     );
 }
@@ -36,13 +36,14 @@ function* loadNews(action) {
     yield put(actions.newsIsLoading(true));
 
     newsData = yield call(fetchNewsData, [action.payload.apiLink]);
+
     newsData.articles.forEach((article) => {
         article.id = createUuidv4();
     });
 
     yield put(actions.newsIsLoading(false));
 
-    if (newsUploadedActionType === constants.actions.TOP_NEWS_UPLOADED) {
+    if (newsUploadedActionType === constants.actions.TOP_NEWS_DOWNLOADED) {
         yield put(actions.newsDownloaded(newsData.articles));
     } else if (
         newsUploadedActionType === constants.actions.RELATED_NEWS_DOWNLOADED

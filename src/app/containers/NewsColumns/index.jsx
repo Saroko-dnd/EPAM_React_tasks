@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     loadNews: apiUrl =>
-        dispatch(actions.loadNews(apiUrl, constants.actions.TOP_NEWS_UPLOADED)),
+        dispatch(actions.loadNews(apiUrl, constants.actions.TOP_NEWS_DOWNLOADED)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsColumns);
