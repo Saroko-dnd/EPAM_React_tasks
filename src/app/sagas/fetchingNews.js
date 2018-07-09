@@ -47,9 +47,7 @@ function* loadNews(action) {
     }
 }
 
-function* loadNewsWithSaga() {
-    yield takeEvery(actionTypes.LOAD_NEWS, loadNews);
-    yield takeEvery(actionTypes.LOAD_RELATED_NEWS, loadRelatedNews);
-}
-
-export default loadNewsWithSaga;
+export default [
+    takeEvery(actionTypes.LOAD_NEWS, loadNews),
+    takeEvery(actionTypes.LOAD_RELATED_NEWS, loadRelatedNews),
+];

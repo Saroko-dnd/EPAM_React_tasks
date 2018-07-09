@@ -1,3 +1,7 @@
+import { all } from 'redux-saga/effects';
+
 import topNewsFetching from './fetchingNews';
 
-export default topNewsFetching;
+export default function* rootSaga() {
+    yield all([...topNewsFetching]);
+}

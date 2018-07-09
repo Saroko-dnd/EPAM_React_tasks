@@ -23,7 +23,7 @@ class SelectedArticle extends React.Component {
         );
     }
 }
-console.log(customPropsTypes);
+
 SelectedArticle.propTypes = {
     loadRelatedNews: PropTypes.func.isRequired,
     selectedArticle: customPropsTypes.article,
