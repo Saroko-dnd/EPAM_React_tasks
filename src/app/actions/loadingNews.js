@@ -1,6 +1,6 @@
 import { createActions } from 'redux-actions';
 
-import constants from '../constants';
+import { actionTypes } from '../constants';
 
 const {
     newsIsLoading,
@@ -9,14 +9,14 @@ const {
     loadNews,
     loadRelatedNews,
 } = createActions({
-    [constants.actions.LOAD_NEWS]: (apiLink, uploadedActionType) => ({
+    [actionTypes.LOAD_NEWS]: (apiLink, uploadedActionType) => ({
         apiLink,
         uploadedActionType,
     }),
-    [constants.actions.NEWS_IS_LOADING]: undefined,
-    [constants.actions.LOAD_RELATED_NEWS]: undefined,
-    [constants.actions.TOP_NEWS_DOWNLOADED]: undefined,
-    [constants.actions.RELATED_NEWS_DOWNLOADED]: undefined,
+    [actionTypes.NEWS_IS_LOADING]: undefined,
+    [actionTypes.LOAD_RELATED_NEWS]: undefined,
+    [actionTypes.TOP_NEWS_DOWNLOADED]: undefined,
+    [actionTypes.RELATED_NEWS_DOWNLOADED]: undefined,
 });
 
 export default {

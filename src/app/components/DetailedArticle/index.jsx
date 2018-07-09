@@ -1,6 +1,6 @@
 import React from 'react';
 
-import constants from '../../constants';
+import { customPropsTypes } from '../../constants';
 
 import './scss/DetailedArticle.scss';
 
@@ -21,7 +21,7 @@ const DetailedArticle = ({ article }) => (
 );
 
 DetailedArticle.propTypes = {
-    article: constants.customPropTypes.article,
+    article: customPropsTypes.article,
 };
 
 DetailedArticle.defaultProps = {

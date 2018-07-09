@@ -1,9 +1,9 @@
 import { handleAction } from 'redux-actions';
 
-import constants from '../constants';
+import { actionTypes } from '../constants';
 
 const articles = handleAction(
-    constants.actions.TOP_NEWS_DOWNLOADED,
+    actionTypes.TOP_NEWS_DOWNLOADED,
     (state, action) => action.payload,
     [],
 );

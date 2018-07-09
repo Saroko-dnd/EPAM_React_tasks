@@ -16,7 +16,7 @@ import './assets/scss/index.scss';
 
 import App from './app/App';
 import reducers from './app/reducers';
-import constants from './app/constants';
+import { initialState } from './app/constants';
 import sagaListeners from './app/sagas';
 
 const history = createBrowserHistory();
@@ -24,7 +24,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     connectRouter(history)(combineReducers(reducers)),
-    constants.initialState,
+    initialState,
     compose(applyMiddleware(routerMiddleware(history), sagaMiddleware)),
 );
 

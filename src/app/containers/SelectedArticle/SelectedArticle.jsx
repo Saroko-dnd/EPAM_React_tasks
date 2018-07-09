@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import DetailedArticle from '../../components/DetailedArticle';
 import ArticlesList from '../../components/ArticlesList';
-import constants from '../../constants';
+import { customPropsTypes } from '../../constants';
 
 class SelectedArticle extends React.Component {
     componentDidMount() {
@@ -23,11 +23,11 @@ class SelectedArticle extends React.Component {
         );
     }
 }
-
+console.log(customPropsTypes);
 SelectedArticle.propTypes = {
     loadRelatedNews: PropTypes.func.isRequired,
-    selectedArticle: constants.customPropTypes.article,
-    relatedArticles: PropTypes.arrayOf(constants.customPropTypes.article),
+    selectedArticle: customPropsTypes.article,
+    relatedArticles: PropTypes.arrayOf(customPropsTypes.article),
 };
 
 SelectedArticle.defaultProps = {

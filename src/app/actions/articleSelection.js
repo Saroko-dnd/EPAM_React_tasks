@@ -1,6 +1,6 @@
 import { createAction } from 'redux-actions';
-import constants from '../constants';
+import { actionTypes } from '../constants';
 
-const selectNewArticle = createAction(constants.actions.ARTICLE_SELECTED);
+const selectNewArticle = createAction(actionTypes.ARTICLE_SELECTED);
 
 export default { selectNewArticle };

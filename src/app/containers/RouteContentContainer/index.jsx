@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import NewsColumns from '../NewsColumns';
 import SelectedArticle from '../SelectedArticle';
-import constants from '../../constants';
+import { api } from '../../constants';
 
 const RouteContentContainer = ({ className }) => (
     <Switch>
@@ -14,8 +14,8 @@ const RouteContentContainer = ({ className }) => (
             render={() => (
                 <main className={`${className} container-fluid`}>
                     <NewsColumns
-                        newsApiLink={constants.apiTopNewsLink}
-                        newsApiToken={constants.apiToken}
+                        newsApiLink={api.apiTopNewsLink}
+                        newsApiToken={api.apiToken}
                     />
                 </main>
             )}

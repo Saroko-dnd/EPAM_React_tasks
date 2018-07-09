@@ -3,7 +3,7 @@ import { RingLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
 import ExtraPropTypes from 'react-extra-prop-types';
 
-import constants from '../../constants';
+import { colors } from '../../constants';
 import './scss/LoadingIndicator.scss';
 
 const LoadingIndicator = ({ color, size, message }) => (
@@ -20,7 +20,7 @@ LoadingIndicator.propTypes = {
 };
 
 LoadingIndicator.defaultProps = {
-    color: constants.colors.green,
+    color: colors.green,
     size: 150,
     message: 'Loading...',
 };
