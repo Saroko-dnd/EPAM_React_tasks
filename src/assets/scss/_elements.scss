@@ -1,0 +1,66 @@
+p,
+span {
+  font-size: 1rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#ovveride-bootstrap {
+  :not(footer *) {
+    font-family: $font-primary;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  header {
+    h1 {
+      font-family: $font-site-header;
+    }
+  }
+
+  a {
+    font-family: $font-links;
+    margin: 0.5rem 0 0.5rem 0;
+    transition: transform 0.5s;
+
+    &:before {
+      content: "< ";
+    }
+
+    &:after {
+      content: " >";
+    }
+
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.5);
+    }
+  }
+
+  nav {
+    a {
+      font-family: $font-site-nav-links;
+
+      &:before {
+        content: "(";
+      }
+
+      &:after {
+        content: ")";
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  footer {
+    font-family: $font-footers;
+  }
+}

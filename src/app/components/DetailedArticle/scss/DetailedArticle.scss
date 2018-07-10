@@ -2,7 +2,9 @@
 @import "./animations";
 
 .detailed-news-article {
-  font-weight: bold;
+  *:not(.url) {
+    font-weight: bold;
+  }
 
   .title {
     @include fadeinAnimation(0s);

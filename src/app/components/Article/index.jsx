@@ -12,7 +12,11 @@ const Article = ({ title, articleId, url }) => {
 
     if (articleId) {
         detailsLink = (
-            <NavLink to={navigation.newsDetails.destination + articleId} exact>
+            <NavLink
+                className="link"
+                to={navigation.newsDetails.destination + articleId}
+                exact
+            >
                 read more
             </NavLink>
         );

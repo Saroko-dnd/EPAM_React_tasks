@@ -1,0 +1,17 @@
+.react-app-site {
+  height: 100%;
+
+  header,
+  main {
+    margin-bottom: auto;
+  }
+
+  > header {
+    background: $site-header-background;
+  }
+
+  > footer {
+    flex-shrink: 0;
+    background: $site-footer-background;
+  }
+}

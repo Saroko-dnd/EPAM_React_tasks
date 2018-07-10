@@ -1,7 +1,5 @@
-html {
-  font-size: 16px;
-}
-
-p {
-  font-size: 1rem;
-}
+@import "mixins";
+@import "variables";
+@import "fonts";
+@import "classes";
+@import "elements";

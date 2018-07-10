@@ -12,7 +12,7 @@ const Header = () => (
             <span>
                 <NewsIcon height={150} width={150} />
             </span>
-            News from all over the world
+            <h1>News from all over the world</h1>
         </header>
         <NavigationPanel
             className="site-header-navigation"
