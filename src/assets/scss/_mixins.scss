@@ -34,3 +34,9 @@
     src: $src;
   }
 }
+
+@mixin gradientAnimation($background, $animationName) {
+  background: $background;
+  animation: $animationName 5s ease-in-out infinite;
+  background-size: 200% 200%;
+}

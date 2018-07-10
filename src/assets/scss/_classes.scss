@@ -7,11 +7,17 @@
   }
 
   > header {
-    background: $site-header-background;
+    @include gradientAnimation(
+      $site-header-background,
+      horizontalLeftGradientAnimation
+    );
   }
 
   > footer {
     flex-shrink: 0;
-    background: $site-footer-background;
+    @include gradientAnimation(
+      $site-footer-background,
+      horizontalRightGradientAnimation
+    );
   }
 }

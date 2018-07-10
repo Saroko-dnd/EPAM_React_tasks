@@ -13,11 +13,13 @@ $site-header-background: linear-gradient(
   to right,
   $color-red 0%,
   $color-yellow 50%,
+  $color-yellow 50%,
   $color-red 100%
 );
 $site-footer-background: linear-gradient(
   to right,
   $color-blue 0%,
+  $color-light-blue 50%,
   $color-light-blue 50%,
   $color-blue 100%
 );
