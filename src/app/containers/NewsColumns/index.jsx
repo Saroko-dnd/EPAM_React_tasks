@@ -12,7 +12,7 @@ function createColumnsFromNews(articles) {
 
     return groupedArticles.map(foundArticles => (
         <ArticlesList
-            className="col-xl-3 col-lg-4 col-md-6"
+            className="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-around"
             key={foundArticles[0].url}
             articles={foundArticles}
             linksToDetails
