@@ -2,6 +2,10 @@
 @import "./animations";
 
 .detailed-news-article {
+  min-width: 20rem;
+  max-width: 62rem;
+  width: 60vw;
+
   *:not(.url) {
     font-weight: bold;
   }
@@ -15,9 +19,6 @@
   .photo {
     @include fadeinAnimation(1s);
     animation-fill-mode: forwards;
-    min-width: 20rem;
-    max-width: 62rem;
-    width: 60vw;
   }
 
   .description {
