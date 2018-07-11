@@ -1,0 +1,19 @@
+@import "mixins";
+
+@include font-face(Hanged Letters, "../fonts/Hanged Letters", null, null, ttf);
+@include font-face(MontereyFLF, "../fonts/MontereyFLF", null, null, ttf);
+@include font-face(Harabara, "../fonts/Harabara", null, null, ttf);
+@include font-face(
+  The_Tribal_Box_demo-font-FFP,
+  "../fonts/The_Tribal_Box_demo-font-FFP",
+  null,
+  null,
+  ttf
+);
+@include font-face(
+  The_Juke_Box-FFP,
+  "../fonts/The_Juke_Box-FFP",
+  null,
+  null,
+  ttf
+);

@@ -1,0 +1,25 @@
+$color-red: rgb(255, 0, 0);
+$color-yellow: rgb(255, 255, 0);
+$color-blue: rgb(57, 75, 240);
+$color-light-blue: rgb(197, 238, 245);
+
+$font-site-header: Hanged Letters;
+$font-site-nav-links: The_Juke_Box-FFP;
+$font-links: The_Tribal_Box_demo-font-FFP;
+$font-footers: MontereyFLF;
+$font-primary: Harabara;
+
+$site-header-background: linear-gradient(
+  to right,
+  $color-red 0%,
+  $color-yellow 50%,
+  $color-yellow 50%,
+  $color-red 100%
+);
+$site-footer-background: linear-gradient(
+  to right,
+  $color-blue 0%,
+  $color-light-blue 50%,
+  $color-light-blue 50%,
+  $color-blue 100%
+);

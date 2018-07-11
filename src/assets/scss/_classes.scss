@@ -1,0 +1,23 @@
+.react-app-site {
+  height: 100%;
+
+  header,
+  main {
+    margin-bottom: auto;
+  }
+
+  > header {
+    @include gradientAnimation(
+      $site-header-background,
+      horizontalLeftGradientAnimation
+    );
+  }
+
+  > footer {
+    flex-shrink: 0;
+    @include gradientAnimation(
+      $site-footer-background,
+      horizontalRightGradientAnimation
+    );
+  }
+}

@@ -1,6 +1,9 @@
 @import "variables";
 
 .news-list {
+  min-width: 20rem;
+  max-width: 63rem;
+
   .title {
     font-size: 3rem;
     text-align: center;

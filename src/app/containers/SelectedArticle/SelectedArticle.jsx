@@ -12,7 +12,7 @@ class SelectedArticle extends React.Component {
 
     render() {
         return (
-            <section>
+            <section className="d-flex align-items-center justify-content-center flex-column">
                 <DetailedArticle article={this.props.selectedArticle} />
                 <ArticlesList
                     title="Related news"
