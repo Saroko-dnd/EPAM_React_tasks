@@ -22,7 +22,7 @@ function createColumnsFromNews(articles) {
 
 const mapStateToProps = state => ({
     columns: createColumnsFromNews(state.articles),
-    dataUploaded: !state.newsIsLoading,
+    dataDownloaded: !state.newsIsLoading,
 });
 
 const mapDispatchToProps = dispatch => ({

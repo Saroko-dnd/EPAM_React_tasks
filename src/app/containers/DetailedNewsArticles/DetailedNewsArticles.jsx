@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Carousel from '../../components/Carousel';
 
 import ArticlesList from '../../components/ArticlesList';
+import LoadingIndicator from '../../components/LoadingIndicator';
 import { customPropsTypes } from '../../constants';
 
 class DetailedNewsArticles extends React.Component {
@@ -32,17 +33,22 @@ class DetailedNewsArticles extends React.Component {
                     }}
                     elements={this.props.detailedArticles}
                 />
-                <ArticlesList
-                    title="Related news"
-                    articles={this.props.relatedArticles}
-                    linksToDetails={false}
-                />
+                {this.props.dataDownloaded ? (
+                    <ArticlesList
+                        title="Related news"
+                        articles={this.props.relatedArticles}
+                        linksToDetails={false}
+                    />
+                ) : (
+                    <LoadingIndicator message="Loading related news..." />
+                )}
             </section>
         );
     }
 }
 
 DetailedNewsArticles.propTypes = {
+    dataDownloaded: PropTypes.bool,
     newsApiLink: PropTypes.string.isRequired,
     newsApiToken: PropTypes.string.isRequired,
     loadNews: PropTypes.func.isRequired,
@@ -52,6 +58,7 @@ DetailedNewsArticles.propTypes = {
 };
 
 DetailedNewsArticles.defaultProps = {
+    dataDownloaded: false,
     relatedArticles: [],
     detailedArticles: [],
 };

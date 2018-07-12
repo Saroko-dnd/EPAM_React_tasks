@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
     relatedArticles: getUniqueRelatedArticles(state),
     detailedArticles: getDetailedArticles(state),
     selectedArticleIndex: state.selectedArticleIndex,
+    dataDownloaded: !state.newsIsLoading,
 });
 
 const mapDispatchToProps = dispatch => ({
