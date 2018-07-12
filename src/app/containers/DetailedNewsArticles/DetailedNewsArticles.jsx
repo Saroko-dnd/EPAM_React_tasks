@@ -7,7 +7,19 @@ import { customPropsTypes } from '../../constants';
 
 class DetailedNewsArticles extends React.Component {
     componentDidMount() {
-        this.props.loadRelatedNews(0);
+        const { newsApiToken, newsApiLink } = this.props;
+        const newsApiRequestLink = `${newsApiLink}country=us&apiKey=${newsApiToken}`;
+
+        this.props.loadNews(newsApiRequestLink);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (
+            prevProps.detailedArticles.length === 0 &&
+            this.props.detailedArticles.length > 0
+        ) {
+            this.props.loadRelatedNews(0);
+        }
     }
 
     render() {
@@ -31,13 +43,17 @@ class DetailedNewsArticles extends React.Component {
 }
 
 DetailedNewsArticles.propTypes = {
+    newsApiLink: PropTypes.string.isRequired,
+    newsApiToken: PropTypes.string.isRequired,
+    loadNews: PropTypes.func.isRequired,
     relatedArticles: PropTypes.arrayOf(customPropsTypes.article),
     loadRelatedNews: PropTypes.func.isRequired,
-    detailedArticles: PropTypes.arrayOf(PropTypes.element).isRequired,
+    detailedArticles: PropTypes.arrayOf(PropTypes.element),
 };
 
 DetailedNewsArticles.defaultProps = {
     relatedArticles: [],
+    detailedArticles: [],
 };
 
 export default DetailedNewsArticles;

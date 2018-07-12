@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 import NewsColumns from '../NewsColumns';
-import SelectedArticle from '../SelectedArticle';
+import DetailedNewsArticles from '../DetailedNewsArticles';
 import { api } from '../../constants';
 
 const RouteContentContainer = ({ className }) => (
@@ -21,7 +21,16 @@ const RouteContentContainer = ({ className }) => (
                     </div>
                 )}
             />
-            <Route exact path="/details" component={SelectedArticle} />
+            <Route
+                exact
+                path="/details"
+                render={() => (
+                    <DetailedNewsArticles
+                        newsApiLink={api.apiTopNewsLink}
+                        newsApiToken={api.apiToken}
+                    />
+                )}
+            />
             <Route exact path="/second" render={() => <h1>Route 3</h1>} />
             <Route exact path="/third" render={() => <h1>Route 4</h1>} />
         </Switch>
