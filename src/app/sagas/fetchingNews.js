@@ -12,11 +12,8 @@ const fetchNewsData = async (apiRequestLink) => {
 };
 
 function* loadRelatedNews(action) {
-    console.log('loadRelatedNews');
     const articles = yield select(getArticles);
-    console.log(articles);
     const selectedArticle = articles[action.payload];
-    console.log(action.payload);
     const relatedNewsUrl = `${api.apiAnyNewsLink}q=${
         selectedArticle.title
     }&sortBy=relevancy&pageSize=30&apiKey=${api.apiToken}`;
@@ -41,9 +38,6 @@ function* loadNews(action) {
     newsData.articles.forEach((article) => {
         article.id = createUuidv4();
     });
-    console.log('loadNews');
-    console.log(action);
-    console.log(newsData.articles);
 
     yield put(actions.newsIsLoading(false));
 

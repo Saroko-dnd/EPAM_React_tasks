@@ -5,14 +5,13 @@ import Carousel from '../../components/Carousel';
 import ArticlesList from '../../components/ArticlesList';
 import { customPropsTypes } from '../../constants';
 
-class SelectedArticle extends React.Component {
+class DetailedNewsArticles extends React.Component {
     componentDidMount() {
         this.props.loadRelatedNews(0);
     }
 
     render() {
         this.finishedRendering = true;
-        console.log('Carousel render');
         return (
             <section className="d-flex align-items-center justify-content-center flex-column">
                 <Carousel
@@ -31,14 +30,14 @@ class SelectedArticle extends React.Component {
     }
 }
 
-SelectedArticle.propTypes = {
+DetailedNewsArticles.propTypes = {
     relatedArticles: PropTypes.arrayOf(customPropsTypes.article),
     loadRelatedNews: PropTypes.func.isRequired,
     detailedArticles: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
-SelectedArticle.defaultProps = {
+DetailedNewsArticles.defaultProps = {
     relatedArticles: [],
 };
 
-export default SelectedArticle;
+export default DetailedNewsArticles;
