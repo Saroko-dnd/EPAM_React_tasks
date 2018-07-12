@@ -11,6 +11,7 @@ import {
     ConnectedRouter,
 } from 'connected-react-router';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import 'bootstrap/scss/bootstrap.scss';
 import './assets/scss/index.scss';
 

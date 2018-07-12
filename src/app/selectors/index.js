@@ -1,4 +1,2 @@
-import getUniqueRelatedArticles from './articlesRelatedToSelected';
-import getArticles from './articles';
-
-export default { getUniqueRelatedArticles, getArticles };
+export * from './articlesRelatedToSelected';
+export * from './articles';

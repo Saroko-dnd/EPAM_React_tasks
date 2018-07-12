@@ -21,18 +21,9 @@ const RouteContentContainer = ({ className }) => (
                     </div>
                 )}
             />
-            <Route
-                exact
-                path="/first"
-                render={() => <h1>Route 2 рабочий</h1>}
-            />
+            <Route exact path="/details" component={SelectedArticle} />
             <Route exact path="/second" render={() => <h1>Route 3</h1>} />
             <Route exact path="/third" render={() => <h1>Route 4</h1>} />
-            <Route
-                exact
-                path="/details/:topNewsId"
-                component={SelectedArticle}
-            />
         </Switch>
     </main>
 );

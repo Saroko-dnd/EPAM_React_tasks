@@ -18,7 +18,7 @@ const Header = () => (
             className="site-header-navigation"
             navigationLinks={[
                 navigation.homePage,
-                navigation.firstPage,
+                navigation.newsDetails,
                 navigation.secondPage,
                 navigation.thirdPage,
             ]}

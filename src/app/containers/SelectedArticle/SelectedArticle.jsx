@@ -1,19 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Carousel from '../../components/Carousel';
 
-import DetailedArticle from '../../components/DetailedArticle';
 import ArticlesList from '../../components/ArticlesList';
 import { customPropsTypes } from '../../constants';
 
 class SelectedArticle extends React.Component {
     componentDidMount() {
-        this.props.loadRelatedNews();
+        this.props.loadRelatedNews(0);
     }
 
     render() {
+        this.finishedRendering = true;
+        console.log('Carousel render');
         return (
             <section className="d-flex align-items-center justify-content-center flex-column">
-                <DetailedArticle article={this.props.selectedArticle} />
+                <Carousel
+                    onChange={(index) => {
+                        this.props.loadRelatedNews(index);
+                    }}
+                    elements={this.props.detailedArticles}
+                />
                 <ArticlesList
                     title="Related news"
                     articles={this.props.relatedArticles}
@@ -25,21 +32,12 @@ class SelectedArticle extends React.Component {
 }
 
 SelectedArticle.propTypes = {
-    loadRelatedNews: PropTypes.func.isRequired,
-    selectedArticle: customPropsTypes.article,
     relatedArticles: PropTypes.arrayOf(customPropsTypes.article),
+    loadRelatedNews: PropTypes.func.isRequired,
+    detailedArticles: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 SelectedArticle.defaultProps = {
-    selectedArticle: {
-        source: { name: '' },
-        title: '',
-        author: '',
-        description: '',
-        urlToImage: '',
-        publishedAt: '',
-        url: '',
-    },
     relatedArticles: [],
 };
 

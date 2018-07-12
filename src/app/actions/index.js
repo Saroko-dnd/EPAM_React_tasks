@@ -8,4 +8,5 @@ export default {
     loadNews: loadingNews.loadNews,
     loadRelatedNews: loadingNews.loadRelatedNews,
     selectNewArticle: articleSelection.selectNewArticle,
+    selectNewArticleIndex: articleSelection.selectNewArticleIndex,
 };

@@ -1,7 +1,11 @@
-$blue-color: rgb(17, 50, 158);
-$green-color: rgb(48, 87, 11);
-$pink-color: rgb(204, 7, 178);
+$red-color: rgb(128, 0, 64);
+$dark-blue-color: rgb(0, 64, 128);
+$dark-brown-color: rgb(64, 0, 0);
+$gray-color: rgba(192, 192, 192, 0.7);
+$dark-green-color: rgb(0, 64, 0);
 
-$description-font-color: $blue-color;
-$title-font-color: $green-color;
-$footer-font-color: $pink-color;
+$description-font-color: $red-color;
+$title-font-color: $dark-blue-color;
+$footer-font-color: $dark-brown-color;
+$text-background-color: $gray-color;
+$link-color: $dark-green-color;

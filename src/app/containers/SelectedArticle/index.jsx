@@ -2,16 +2,22 @@ import { connect } from 'react-redux';
 
 import actions from '../../actions';
 import SelectedArticle from './SelectedArticle';
-import selectorsForRelatedArticles from '../../selectors';
+import { getUniqueRelatedArticles, getDetailedArticles } from '../../selectors';
 
-const mapStateToProps = state => ({
-    selectedArticle: state.selectedArticle || undefined,
-    relatedArticles: selectorsForRelatedArticles.getUniqueRelatedArticles(state),
-});
+const mapStateToProps = (state) => {
+    console.log('mapStateToProps');
+    console.log(getUniqueRelatedArticles(state));
+    return {
+        relatedArticles: getUniqueRelatedArticles(state),
+        detailedArticles: getDetailedArticles(state),
+        selectedArticleIndex: state.selectedArticleIndex,
+    };
+};
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-    loadRelatedNews: () => {
-        dispatch(actions.loadRelatedNews(ownProps.match.params.topNewsId));
+const mapDispatchToProps = dispatch => ({
+    loadRelatedNews: (index) => {
+        console.log(`loadRelatedNews_dispatch ${index}`);
+        dispatch(actions.loadRelatedNews(index));
     },
 });
 

@@ -2,12 +2,16 @@
 @import "./animations";
 
 .detailed-news-article {
-  min-width: 20rem;
-  max-width: 62rem;
-  width: 60vw;
+  height: 60vh;
+  min-height: 35rem;
+  background-size: cover;
+  background-position: 50% 0;
 
-  *:not(.url) {
-    font-weight: bold;
+  > * {
+    background-color: $text-background-color;
+    &:not(.url) {
+      font-weight: bold;
+    }
   }
 
   .title {
@@ -17,6 +21,8 @@
   }
 
   .photo {
+    display: none;
+    max-height: 500px;
     @include fadeinAnimation(1s);
     animation-fill-mode: forwards;
   }
@@ -29,6 +35,7 @@
 
   .url {
     @include fadeinAnimation(3s);
+    color: $link-color;
     font-size: 3rem;
   }
 
