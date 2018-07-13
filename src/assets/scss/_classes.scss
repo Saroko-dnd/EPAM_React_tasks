@@ -18,6 +18,13 @@
     );
   }
 }
+
+.news-list {
+  .title {
+    font-family: $font-headers;
+  }
+}
+
 #ovveride-bootstrap {
   .carousel {
     max-width: 63rem;

@@ -3,19 +3,14 @@
 .news-list {
   min-width: 20rem;
   max-width: 63rem;
+  min-height: 100%;
 
   .title {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
   }
 
-  > * {
-    &:nth-child(odd) {
-      color: $odd-news-list-item-color;
-    }
-
-    &:nth-child(even) {
-      color: $even-news-list-item-color;
-    }
+  .news-article {
+    color: $news-list-item-color;
   }
 }

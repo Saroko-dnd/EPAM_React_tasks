@@ -7,13 +7,20 @@ import './scss/index.scss';
 
 const ArticlesList = ({ title, articles, className }) => {
     const arrayOfNews = articles.map(article => (
-        <Article key={article.url} title={article.title} url={article.url} />
+        <Article
+            key={article.url}
+            title={article.title}
+            url={article.url}
+            imgUrl={article.urlToImage}
+        />
     ));
 
     return (
         <div className={`news-list ${className}`}>
             <h2 className="title">{title}</h2>
-            {arrayOfNews}
+            <div className="d-flex justify-content-center align-items-center flex-wrap justify-content-center">
+                {arrayOfNews}
+            </div>
         </div>
     );
 };

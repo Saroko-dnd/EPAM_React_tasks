@@ -1,11 +1,11 @@
-p,
-span {
-  font-size: 1rem;
-}
-
 html,
 body {
   height: 100%;
+}
+
+p,
+span {
+  font-size: 1rem;
 }
 
 #ovveride-bootstrap {
@@ -38,7 +38,7 @@ body {
 
     &:hover {
       text-decoration: none;
-      transform: scale(1.5);
+      transform: scale(1.25);
     }
   }
 

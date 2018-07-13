@@ -13,7 +13,7 @@ class NewsColumns extends React.Component {
     render() {
         if (this.props.dataDownloaded) {
             return (
-                <section className="news-columns row">
+                <section className="news-columns row justify-content-center align-items-stretch">
                     {this.props.columns}
                 </section>
             );

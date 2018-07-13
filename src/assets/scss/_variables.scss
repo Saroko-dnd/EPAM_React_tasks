@@ -10,6 +10,7 @@ $font-site-nav-links: The_Juke_Box-FFP;
 $font-links: The_Tribal_Box_demo-font-FFP;
 $font-footers: MontereyFLF;
 $font-primary: Harabara;
+$font-headers: MontereyFLF;
 
 $slider-background-color: transparent;
 $slider-dots-color: $color-white;
@@ -29,3 +30,5 @@ $site-footer-background: linear-gradient(
   $color-light-blue 50%,
   $color-blue 100%
 );
+
+$fa-font-path: "~font-awesome/fonts";

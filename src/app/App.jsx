@@ -9,7 +9,10 @@ import './App.scss';
 
 function App() {
     return (
-        <div id="ovveride-bootstrap" className="react-app-site d-flex flex-column">
+        <div
+            id="ovveride-bootstrap"
+            className="react-app-site d-flex flex-column"
+        >
             <Header />
             <Main className="react-app-main" />
             <Footer />
