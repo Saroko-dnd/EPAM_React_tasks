@@ -6,41 +6,61 @@
   min-height: 35rem;
   background-size: cover;
   background-position: 50% 0;
+  background-color: $overlay-color;
 
-  > * {
-    background-color: $text-background-color;
-    &:not(.url) {
-      font-weight: bold;
-    }
+  * {
+    font-weight: bold;
   }
 
   .title {
-    @include fadeinAnimation(0s);
-    font-size: 2.5rem;
+    align-self: start;
+    font-size: 2rem;
     color: $title-font-color;
+    background-color: $overlay-color;
+    text-align: left;
   }
 
   .photo {
     display: none;
     max-height: 500px;
-    @include fadeinAnimation(1s);
     animation-fill-mode: forwards;
   }
 
   .description {
-    @include fadeinAnimation(2s);
-    font-size: 2rem;
+    text-align: left;
+    align-self: start;
+    font-size: 1.5rem;
     color: $description-font-color;
+    background-color: $overlay-color;
   }
 
   .url {
-    @include fadeinAnimation(3s);
+    background-color: $link-background-color;
     color: $link-color;
+    border: 5px solid white;
+    border-radius: 1rem;
     font-size: 3rem;
+    transition: all 1s;
+
+    &:hover {
+      text-decoration: none;
+      color: $link-hover-color;
+      background-color: white;
+    }
+  }
+
+  .bottom-content {
+    position: absolute;
+    bottom: 0;
   }
 
   footer {
-    @include fadeinAnimation(4s);
+    * {
+      margin: 0 1rem;
+    }
+
+    margin: 1rem 0 1.5rem;
     color: $footer-font-color;
+    background-color: $overlay-color;
   }
 }

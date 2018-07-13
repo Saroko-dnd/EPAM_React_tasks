@@ -6,20 +6,23 @@ import './scss/DetailedArticle.scss';
 
 const DetailedArticle = ({ article }) => (
     <article
-        className="detailed-news-article d-flex align-items-center justify-content-center flex-column"
+        className="detailed-news-article d-flex align-items-center justify-content-start flex-column"
         style={{ backgroundImage: `url(${article.urlToImage})` }}
     >
         <h2 className="title">{article.title}</h2>
-        <img className="photo img-fluid" src={article.urlToImage} alt=":(" />
         <p className="description d-none d-sm-block">{article.description}</p>
-        <a className="url" href={article.url}>
-            read source
-        </a>
-        <footer className="d-flex align-items-center flex-column">
-            <p>{new Date(Date.parse(article.publishedAt)).toDateString()}</p>
-            <span>{article.source.name}</span>
-            <p>{article.author}</p>
-        </footer>
+        <div className="bottom-content">
+            <a className="url" href={article.url}>
+                read source
+            </a>
+            <footer className="d-flex align-items-center">
+                <p>
+                    {new Date(Date.parse(article.publishedAt)).toDateString()}
+                </p>
+                <span>{article.source.name}</span>
+                <p>{article.author}</p>
+            </footer>
+        </div>
     </article>
 );
 

@@ -1,0 +1,65 @@
+@import "variables";
+
+.carousel {
+  max-width: 63rem;
+  min-width: 20rem;
+  width: 60vw;
+  height: 60vh;
+  min-height: 35rem;
+
+  .carousel-status {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 96%;
+  }
+
+  .slide {
+    background-color: $slider-background-color;
+  }
+
+  .control-dots {
+    background-color: $slider-dots-panel-background-color;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    margin: 0;
+    position: relative;
+
+    .dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: $slider-dots-color;
+      box-shadow: none;
+    }
+  }
+
+  &.carousel-slider {
+    overflow: visible;
+
+    .control-arrow {
+      color: white;
+
+      &.control- {
+        &next {
+          &:before {
+            font-size: 3rem;
+            content: "\f054";
+            font-family: FontAwesome;
+            border: none;
+          }
+        }
+
+        &prev {
+          &:before {
+            font-size: 3rem;
+            content: "\f053";
+            font-family: FontAwesome;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

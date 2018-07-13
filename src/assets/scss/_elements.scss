@@ -23,23 +23,8 @@ span {
     }
   }
 
-  a {
+  a:not(.url) {
     font-family: $font-links;
-    margin: 0.5rem 0 0.5rem 0;
-    transition: transform 0.5s;
-
-    &:before {
-      content: "< ";
-    }
-
-    &:after {
-      content: " >";
-    }
-
-    &:hover {
-      text-decoration: none;
-      transform: scale(1.25);
-    }
   }
 
   nav {

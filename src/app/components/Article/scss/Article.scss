@@ -21,6 +21,21 @@
 
   .card-link {
     font-size: 2rem;
+    margin: 0.5rem 0 0.5rem 0;
+    transition: transform 0.5s;
+
+    &:before {
+      content: "< ";
+    }
+
+    &:after {
+      content: " >";
+    }
+
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.25);
+    }
   }
 
   .card-body {

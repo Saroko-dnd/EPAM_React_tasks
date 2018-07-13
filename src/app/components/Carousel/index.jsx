@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
 
+import './scss/carousel.scss';
+
 class CustomCarousel extends React.Component {
     shouldComponentUpdate() {
         return this.props.elements.length === 0;
