@@ -5,13 +5,18 @@ $color-light-blue: rgb(197, 238, 245);
 $color-white: rgb(255, 255, 255);
 $color-black: rgb(0, 0, 0);
 
-$font-site-header: Hanged Letters;
+$color-header-link: $color-white;
+$color-header-link-background: none;
+$color-header-active-link: $color-black;
+$color-header-active-link-background: $color-white;
+
+$font-site-header: Canterbury;
 $font-site-nav-links: The_Juke_Box-FFP;
 $font-links: The_Tribal_Box_demo-font-FFP;
 $font-footers: MontereyFLF;
 $font-primary: Harabara;
 $font-headers: MontereyFLF;
-$font-slider-links: MontereyFLF;
+$font-slider-links: Montserrat-Regular;
 
 $site-header-background: linear-gradient(
   to right,

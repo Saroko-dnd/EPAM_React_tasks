@@ -1,21 +1,24 @@
 .react-app-site {
-  header,
   main {
     margin-bottom: auto;
   }
 
   > header {
-    @include gradientAnimation(
+    background-color: black;
+    color: white;
+    /*@include gradientAnimation(
       $site-header-background,
       horizontalLeftGradientAnimation
-    );
+    );*/
   }
   > footer {
+    background-color: black;
+    color: white;
     flex-shrink: 0;
-    @include gradientAnimation(
+    /* @include gradientAnimation(
       $site-footer-background,
       horizontalRightGradientAnimation
-    );
+    );*/
   }
 }
 
@@ -26,7 +29,18 @@
 }
 
 .detailed-news-article {
-  .url {
+  * {
     font-family: $font-slider-links;
   }
+}
+
+.nav-pills .nav-link.active {
+  background-color: $color-header-active-link-background;
+  color: $color-header-active-link;
+  border-radius: 0;
+}
+
+.nav-pills .nav-link {
+  background-color: $color-header-link-background;
+  color: $color-header-link;
 }

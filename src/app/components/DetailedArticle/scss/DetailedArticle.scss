@@ -3,21 +3,23 @@
 
 .detailed-news-article {
   height: 60vh;
-  min-height: 35rem;
   background-size: cover;
   background-position: 50% 0;
   background-color: $overlay-color;
+  overflow: hidden;
 
   * {
     font-weight: bold;
   }
 
+  .news-content {
+    background-color: $overlay-color;
+  }
+
   .title {
-    align-self: start;
+    font-style: italic;
     font-size: 2rem;
     color: $title-font-color;
-    background-color: $overlay-color;
-    text-align: left;
   }
 
   .photo {
@@ -27,31 +29,35 @@
   }
 
   .description {
-    text-align: left;
-    align-self: start;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: $description-font-color;
-    background-color: $overlay-color;
+  }
+
+  .place-holder {
+    flex-grow: 1;
   }
 
   .url {
     background-color: $link-background-color;
+    padding: 0.5rem;
     color: $link-color;
-    border: 5px solid white;
+    border: 0.1rem solid $link-border-color;
     border-radius: 1rem;
-    font-size: 3rem;
+    font-size: 1rem;
+    font-weight: 100;
     transition: all 1s;
 
     &:hover {
       text-decoration: none;
       color: $link-hover-color;
-      background-color: white;
+      background-color: $link-hover-background-color;
     }
   }
 
-  .bottom-content {
-    position: absolute;
-    bottom: 0;
+  .horizontal-line {
+    width: 60%;
+    margin: 0.25rem auto;
+    border: 1px solid $horizontal-line-color;
   }
 
   footer {

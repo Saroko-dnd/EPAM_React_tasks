@@ -1,18 +1,22 @@
 $red-color: rgb(128, 0, 64);
 $dark-blue-color: rgb(0, 64, 128);
-$dark-brown-color: rgb(238, 241, 59);
+$yellow-color: rgb(238, 241, 59);
 $gray-color: rgba(192, 192, 192, 0.7);
 $dark-green-color: rgb(0, 64, 0);
 $color-dark-gray: rgba(64, 84, 94, 0.5);
 $color-light-brown: rgb(238, 220, 172);
 $color-white: rgb(255, 255, 255);
 $color-black: rgb(0, 0, 0);
+$color-green: rgb(73, 197, 182);
 
-$description-font-color: $color-light-brown;
+$description-font-color: $color-white;
 $title-font-color: $color-white;
-$footer-font-color: $dark-brown-color;
+$footer-font-color: $yellow-color;
 $text-background-color: $gray-color;
 $link-color: $color-white;
 $link-background-color: $color-black;
 $link-hover-color: $color-black;
-$overlay-color: $color-dark-gray;
+$link-hover-background-color: $color-white;
+$link-border-color: $color-white;
+$overlay-color: rgba(0, 0, 0, 0.75);
+$horizontal-line-color: $color-white;
