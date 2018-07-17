@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    toggleNavLinks: (toggle) => {
-        dispatch(actions.toggleNavLinks(toggle));
+    toggleNavLinks: (open) => {
+        dispatch(actions.toggleNavLinks(open));
     },
 });
 
