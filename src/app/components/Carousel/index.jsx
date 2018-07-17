@@ -11,14 +11,16 @@ class CustomCarousel extends React.Component {
 
     render() {
         return (
-            <Carousel
-                onChange={this.props.onChange}
-                className="d-block"
-                showThumbs={false}
-                width="60vw"
-            >
-                {this.props.elements}
-            </Carousel>
+            <div className="carousel-wrapper">
+                <Carousel
+                    onChange={this.props.onChange}
+                    className="d-block"
+                    showThumbs={false}
+                    width="100%"
+                >
+                    {this.props.elements}
+                </Carousel>
+            </div>
         );
     }
 }

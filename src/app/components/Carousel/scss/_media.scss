@@ -1,0 +1,19 @@
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/mixins/_breakpoints.scss";
+
+@include media-breakpoint-down(lg) {
+  .carousel-wrapper {
+    max-width: none;
+    min-width: none;
+    width: 100vw;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .carousel-wrapper {
+    max-width: 75rem;
+    min-width: 20rem;
+    width: 70vw;
+  }
+}

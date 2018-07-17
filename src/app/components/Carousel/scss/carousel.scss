@@ -1,9 +1,8 @@
 @import "variables";
+@import "media";
 
 .carousel {
-  max-width: 63rem;
-  min-width: 20rem;
-  width: 60vw;
+  min-height: 20rem;
   height: 60vh;
 
   .carousel-status {
