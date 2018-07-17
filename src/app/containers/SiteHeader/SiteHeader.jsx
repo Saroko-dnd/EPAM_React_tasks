@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import Header from '../../components/Header';
 
-const SiteHeader = ({ navLinksToggled, toggleNavLinks }) => (
+const SiteHeader = ({ navMenuIsOpened, toggleNavLinks }) => (
     <header>
         <Header
-            navLinksToggled={navLinksToggled}
+            navMenuIsOpened={navMenuIsOpened}
             toggleNavLinks={toggleNavLinks}
         />
     </header>
@@ -14,7 +14,7 @@ const SiteHeader = ({ navLinksToggled, toggleNavLinks }) => (
 
 SiteHeader.propTypes = {
     toggleNavLinks: PropTypes.func.isRequired,
-    navLinksToggled: PropTypes.bool.isRequired,
+    navMenuIsOpened: PropTypes.bool.isRequired,
 };
 
 export default SiteHeader;

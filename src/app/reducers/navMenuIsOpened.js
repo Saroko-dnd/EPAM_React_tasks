@@ -2,10 +2,10 @@ import { handleAction } from 'redux-actions';
 
 import { actionTypes } from '../constants';
 
-const articles = handleAction(
+const navMenuIsOpened = handleAction(
     actionTypes.NAV_LINKS_TOGGLED,
     (state, action) => action.payload,
     false,
 );
 
-export default articles;
+export default navMenuIsOpened;

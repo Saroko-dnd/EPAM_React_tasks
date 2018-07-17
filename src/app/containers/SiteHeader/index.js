@@ -4,7 +4,7 @@ import SiteHeader from './SiteHeader';
 import actions from '../../actions';
 
 const mapStateToProps = state => ({
-    navLinksToggled: state.navLinksToggled,
+    navMenuIsOpened: state.navMenuIsOpened,
 });
 
 const mapDispatchToProps = dispatch => ({

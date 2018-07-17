@@ -7,7 +7,7 @@ import { navigation } from '../../constants';
 
 import './scss/Header.scss';
 
-const Header = ({ toggleNavLinks, navLinksToggled }) => (
+const Header = ({ toggleNavLinks, navMenuIsOpened }) => (
     <div className="site-header d-flex align-items-center flex-column">
         <div className="d-flex align-items-center">
             <span>
@@ -21,7 +21,7 @@ const Header = ({ toggleNavLinks, navLinksToggled }) => (
             <button
                 className="nav-menu-button d-block d-sm-none"
                 onClick={() => {
-                    toggleNavLinks(!navLinksToggled);
+                    toggleNavLinks(!navMenuIsOpened);
                 }}
             >
                 <span className="fa fa-bars" />
@@ -29,7 +29,7 @@ const Header = ({ toggleNavLinks, navLinksToggled }) => (
         </div>
         <NavigationPanel
             className={`site-header-navigation d-sm-flex ${
-                navLinksToggled ? 'd-flex' : 'd-none'
+                navMenuIsOpened ? 'd-flex' : 'd-none'
             }`}
             navLinksCallback={() => toggleNavLinks(false)}
             navigationLinks={[
@@ -44,7 +44,7 @@ const Header = ({ toggleNavLinks, navLinksToggled }) => (
 
 Header.propTypes = {
     toggleNavLinks: PropTypes.func.isRequired,
-    navLinksToggled: PropTypes.bool.isRequired,
+    navMenuIsOpened: PropTypes.bool.isRequired,
 };
 
 export default Header;

@@ -49,7 +49,7 @@ const colors = {
 const initialState = {
     articles: [],
     articlesRelatedToSelected: [],
-    navLinksToggled: false,
+    navMenuIsOpened: false,
     selectedArticleIndex: 0,
     selectedArticle: null,
     newsIsLoading: false,
