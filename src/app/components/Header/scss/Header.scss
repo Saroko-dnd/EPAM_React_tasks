@@ -1,3 +1,5 @@
+@import "media";
+
 .site-header-navigation {
   a {
     font-size: 3rem;
@@ -5,8 +7,15 @@
 }
 
 .site-header {
-  header {
-    font-size: 4rem;
+  h1 {
     vertical-align: middle;
   }
+}
+
+.nav-menu-button {
+  font-size: 4rem;
+  color: white;
+  background-color: black;
+  border: 0;
+  padding: 0;
 }

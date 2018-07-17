@@ -49,6 +49,7 @@ const colors = {
 const initialState = {
     articles: [],
     articlesRelatedToSelected: [],
+    navLinksToggled: false,
     selectedArticleIndex: 0,
     selectedArticle: null,
     newsIsLoading: false,
@@ -62,6 +63,7 @@ const actionTypes = {
     ARTICLE_INDEX_SELECTED: 'ARTICLE_INDEX_SELECTED',
     LOAD_RELATED_NEWS: 'LOAD_RELATED_NEWS',
     LOAD_NEWS: 'LOAD_NEWS',
+    NAV_LINKS_TOGGLED: 'NAV_LINKS_TOGGLED',
 };
 
 export {

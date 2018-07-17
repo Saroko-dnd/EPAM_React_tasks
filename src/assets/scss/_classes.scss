@@ -3,22 +3,15 @@
     margin-bottom: auto;
   }
 
-  > header {
+  .site-header {
     background-color: black;
     color: white;
-    /*@include gradientAnimation(
-      $site-header-background,
-      horizontalLeftGradientAnimation
-    );*/
   }
+
   > footer {
     background-color: black;
     color: white;
     flex-shrink: 0;
-    /* @include gradientAnimation(
-      $site-footer-background,
-      horizontalRightGradientAnimation
-    );*/
   }
 }
 
@@ -34,13 +27,19 @@
   }
 }
 
-.nav-pills .nav-link.active {
-  background-color: $color-header-active-link-background;
-  color: $color-header-active-link;
-  border-radius: 0;
+.nav-pills {
+  .nav-link {
+    &.active {
+      background-color: $color-header-active-link-background;
+      color: $color-header-active-link;
+      border-radius: 0;
+    }
+  }
 }
 
-.nav-pills .nav-link {
-  background-color: $color-header-link-background;
-  color: $color-header-link;
+.nav-pills {
+  .nav-link {
+    background-color: $color-header-link-background;
+    color: $color-header-link;
+  }
 }

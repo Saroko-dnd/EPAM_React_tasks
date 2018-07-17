@@ -1,58 +1,29 @@
-import React from 'react';
-import { NewsIcon } from 'react-svg-icons-by-igor-saroko';
+import { connect } from 'react-redux';
 
-import NavigationPanel from '../NavigationPanel';
-import { navigation } from '../../constants';
+import Header from './Heaser';
+import actions from '../../actions';
 
-import './scss/Header.scss';
+const mapStateToProps = state => ({
+    navLinksToggled: state.navLinksToggled,
+});
 
-const Header = () => (
-    <header className="site-header d-flex align-items-center flex-column">
-        <header className="d-flex align-items-center">
-            <div className="dropdown d-block d-sm-none">
-                <button
-                    className="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                >
-                    Dropdown button
-                </button>
-                <div
-                    className="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                >
-                    <a className="dropdown-item" href="/">
-                        Action
-                    </a>
-                    <a className="dropdown-item" href="/">
-                        Another action
-                    </a>
-                    <a className="dropdown-item" href="/">
-                        Something else here
-                    </a>
-                    <a className="dropdown-item" href="/">
-                        Something else here
-                    </a>
-                </div>
-            </div>
-            <span>
-                <NewsIcon height={150} width={150} />
-            </span>
-            <h1>News from all over the world</h1>
-        </header>
-        <NavigationPanel
-            className="site-header-navigation"
-            navigationLinks={[
-                navigation.homePage,
-                navigation.newsDetails,
-                navigation.secondPage,
-                navigation.thirdPage,
-            ]}
-        />
-    </header>
-);
+const mapDispatchToProps = dispatch => ({
+    toggleNavLinks: (toggle) => {
+        console.log(toggle);
+        dispatch(actions.toggleNavLinks(toggle));
+    },
+});
 
-export default Header;
+const mergeProps = (stateProps, dispatchProps) => ({
+    ...stateProps,
+    ...dispatchProps,
+});
+
+const options = { pure: false };
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+    mergeProps,
+    options,
+)(Header);

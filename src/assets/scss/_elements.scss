@@ -29,18 +29,20 @@ span {
 
   nav {
     a {
-      font-family: $font-site-nav-links;
+      &:not(.navbar-brand, .nav-link) {
+        font-family: $font-site-nav-links;
 
-      &:before {
-        content: "(";
-      }
+        &:before {
+          content: "(";
+        }
 
-      &:after {
-        content: ")";
-      }
+        &:after {
+          content: ")";
+        }
 
-      &:hover {
-        transform: none;
+        &:hover {
+          transform: none;
+        }
       }
     }
   }
