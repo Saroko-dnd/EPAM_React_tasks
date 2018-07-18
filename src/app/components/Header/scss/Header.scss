@@ -1,6 +1,9 @@
 @import "media";
+@import "variables";
 
 .site-header-navigation {
+  background-color: #1e2228;
+
   a {
     font-size: 3rem;
   }
@@ -20,4 +23,10 @@
   background-color: black;
   border: 0;
   padding: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $color-menu-button-hover;
+  }
 }

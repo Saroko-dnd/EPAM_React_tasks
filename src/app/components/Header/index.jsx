@@ -19,7 +19,7 @@ const Header = ({ toggleNavLinks, navMenuIsOpened }) => (
             </span>
             <h1>News from all over the world</h1>
             <button
-                className="nav-menu-button d-block d-sm-none"
+                className="nav-menu-button d-block d-lg-none"
                 onClick={() => {
                     toggleNavLinks(!navMenuIsOpened);
                 }}
@@ -28,7 +28,7 @@ const Header = ({ toggleNavLinks, navMenuIsOpened }) => (
             </button>
         </div>
         <NavigationPanel
-            className={`site-header-navigation d-sm-flex ${
+            className={`site-header-navigation d-lg-flex ${
                 navMenuIsOpened ? 'd-flex' : 'd-none'
             }`}
             navLinksCallback={() => toggleNavLinks(false)}
