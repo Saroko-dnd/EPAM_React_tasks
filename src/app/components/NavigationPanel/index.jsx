@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const NavigationPanel = ({ navLinksCallback, navigationLinks, className }) => (
     <nav
-        className={`navigation-panel nav nav-pills justify-content-around ${className}`}
+        className={`navigation-panel nav nav-pills justify-content-center align-items-center ${className}`}
     >
         {navigationLinks.map(navLinkInfo => (
             <NavLink

@@ -29,7 +29,7 @@ span {
 
   nav {
     a {
-      &:not(.navbar-brand, .nav-link) {
+      &:not(.navbar-brand) {
         font-family: $font-site-nav-links;
 
         &:before {
