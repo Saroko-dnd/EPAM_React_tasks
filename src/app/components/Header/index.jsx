@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NewsIcon } from 'react-svg-icons-by-igor-saroko';
+import { SlideDown } from 'react-slidedown';
 
 import NavigationPanel from '../NavigationPanel';
 import { navigation } from '../../constants';
@@ -27,18 +28,20 @@ const Header = ({ toggleNavLinks, navMenuIsOpened }) => (
                 <span className="fa fa-bars" />
             </button>
         </div>
-        <NavigationPanel
-            className={`site-header-navigation d-lg-flex ${
-                navMenuIsOpened ? 'd-flex' : 'd-none'
-            }`}
-            navLinksCallback={() => toggleNavLinks(false)}
-            navigationLinks={[
-                navigation.homePage,
-                navigation.newsDetails,
-                navigation.secondPage,
-                navigation.thirdPage,
-            ]}
-        />
+        <SlideDown className="animation-lg-disabled">
+            <NavigationPanel
+                className={`site-header-navigation d-lg-flex ${
+                    navMenuIsOpened ? 'd-flex' : 'd-none'
+                }`}
+                navLinksCallback={() => toggleNavLinks(false)}
+                navigationLinks={[
+                    navigation.homePage,
+                    navigation.newsDetails,
+                    navigation.secondPage,
+                    navigation.thirdPage,
+                ]}
+            />
+        </SlideDown>
     </div>
 );
 

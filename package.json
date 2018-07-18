@@ -60,6 +60,7 @@
         "react-redux": "^5.0.7",
         "react-responsive-carousel": "^3.1.41",
         "react-router-dom": "^4.3.1",
+        "react-slidedown": "^1.3.0",
         "react-spinners": "^0.3.2",
         "react-svg-icons-by-igor-saroko": "^1.0.3",
         "reactstrap": "^6.3.0",

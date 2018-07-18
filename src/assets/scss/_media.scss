@@ -1,0 +1,15 @@
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/mixins/_breakpoints.scss";
+
+@include media-breakpoint-down(lg) {
+  .animation-lg-disabled {
+    transition: all 0.5s;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .animation-lg-disabled {
+    transition: all 0s;
+  }
+}
