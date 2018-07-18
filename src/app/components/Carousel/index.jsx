@@ -13,6 +13,7 @@ class CustomCarousel extends React.Component {
         return (
             <div className="carousel-wrapper">
                 <Carousel
+                    render={() => <h5>dfdfdf</h5>}
                     onChange={this.props.onChange}
                     className="d-block"
                     showThumbs={false}

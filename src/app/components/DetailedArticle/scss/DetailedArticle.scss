@@ -2,7 +2,6 @@
 @import "./animations";
 
 .detailed-news-article {
-  height: 60vh;
   background-size: cover;
   background-position: 50% 0;
   background-color: $overlay-color;
@@ -65,7 +64,7 @@
       margin: 0 1rem;
     }
 
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0 2rem;
     color: $footer-font-color;
     background-color: $overlay-color;
   }

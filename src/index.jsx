@@ -1,5 +1,4 @@
 import React from 'react';
-// import Thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';

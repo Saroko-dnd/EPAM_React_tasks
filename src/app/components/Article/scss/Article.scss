@@ -5,12 +5,13 @@
   box-shadow: 0 0 2rem 0 $shadow-color;
   border-radius: 1rem;
   width: 18rem;
-  margin: 1rem 0;
+  margin: 1rem;
+  transition: all 0.25s;
 
   .card-title {
     width: 270px;
     height: 7rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .card-img-top {
@@ -22,7 +23,7 @@
   .card-link {
     font-size: 2rem;
     margin: 0.5rem 0 0.5rem 0;
-    transition: transform 0.5s;
+    transition: all 0.25s;
 
     &:before {
       content: "< ";
@@ -46,5 +47,9 @@
     margin: 0.25rem 0 0.25rem 0;
     font-size: 2rem;
     text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
