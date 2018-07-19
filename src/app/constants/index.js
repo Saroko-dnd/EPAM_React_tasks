@@ -35,8 +35,10 @@ const navigation = {
         isActive: null,
     },
     newsDetails: {
-        destination: '/details/',
+        destination: '/details',
+        title: 'Detailed news',
         id: 'nav-link-5',
+        isActive: null,
     },
 };
 
@@ -47,6 +49,8 @@ const colors = {
 const initialState = {
     articles: [],
     articlesRelatedToSelected: [],
+    navMenuIsOpened: false,
+    selectedArticleIndex: 0,
     selectedArticle: null,
     newsIsLoading: false,
 };
@@ -56,8 +60,10 @@ const actionTypes = {
     TOP_NEWS_DOWNLOADED: 'TOP_NEWS_DOWNLOADED',
     RELATED_NEWS_DOWNLOADED: 'RELATED_NEWS_DOWNLOADED',
     ARTICLE_SELECTED: 'ARTICLE_SELECTED',
+    ARTICLE_INDEX_SELECTED: 'ARTICLE_INDEX_SELECTED',
     LOAD_RELATED_NEWS: 'LOAD_RELATED_NEWS',
     LOAD_NEWS: 'LOAD_NEWS',
+    TOGGLE_NAV_MENU: 'TOGGLE_NAV_MENU',
 };
 
 export {

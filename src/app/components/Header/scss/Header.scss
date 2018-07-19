@@ -1,12 +1,32 @@
+@import "media";
+@import "variables";
+
 .site-header-navigation {
+  background-color: #1e2228;
+
   a {
     font-size: 3rem;
   }
 }
 
 .site-header {
-  header {
-    font-size: 4rem;
+  width: 100%;
+
+  h1 {
     vertical-align: middle;
+  }
+}
+
+.nav-menu-button {
+  font-size: 4rem;
+  color: $color-menu-button;
+  background-color: black;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $color-menu-button-hover;
   }
 }

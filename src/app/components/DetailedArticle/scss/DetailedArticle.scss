@@ -2,38 +2,70 @@
 @import "./animations";
 
 .detailed-news-article {
-  min-width: 20rem;
-  max-width: 62rem;
-  width: 60vw;
+  background-size: cover;
+  background-position: 50% 0;
+  background-color: $overlay-color;
+  overflow: hidden;
 
-  *:not(.url) {
+  * {
     font-weight: bold;
   }
 
+  .news-content {
+    background-color: $overlay-color;
+  }
+
   .title {
-    @include fadeinAnimation(0s);
-    font-size: 2.5rem;
+    font-style: italic;
+    font-size: 2rem;
     color: $title-font-color;
   }
 
   .photo {
-    @include fadeinAnimation(1s);
+    display: none;
+    max-height: 500px;
     animation-fill-mode: forwards;
   }
 
   .description {
-    @include fadeinAnimation(2s);
-    font-size: 2rem;
+    font-size: 1rem;
     color: $description-font-color;
   }
 
+  .place-holder {
+    flex-grow: 1;
+  }
+
   .url {
-    @include fadeinAnimation(3s);
-    font-size: 3rem;
+    background-color: $link-background-color;
+    padding: 0.5rem;
+    color: $link-color;
+    border: 0.1rem solid $link-border-color;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    transition: all 1s;
+
+    &:hover {
+      text-decoration: none;
+      color: $link-hover-color;
+      background-color: $link-hover-background-color;
+    }
+  }
+
+  .horizontal-line {
+    width: 60%;
+    margin: 0.25rem auto;
+    border: 1px solid $horizontal-line-color;
   }
 
   footer {
-    @include fadeinAnimation(4s);
+    * {
+      margin: 0 1rem;
+    }
+
+    margin: 1rem 0 2rem;
     color: $footer-font-color;
+    background-color: $overlay-color;
   }
 }

@@ -1,17 +1,9 @@
 ﻿{
-    "presets": [
-        "env",
-        "es2015",
-        "react"
-    ],
-    "plugins": [
-        "transform-class-properties"
-    ],
+    "presets": ["env", "es2015", "react"],
+    "plugins": ["transform-class-properties", "transform-object-rest-spread"],
     "env": {
         "production": {
-            "plugins": [
-                "transform-react-remove-prop-types"
-            ]
+            "plugins": ["transform-react-remove-prop-types"]
         }
     }
 }

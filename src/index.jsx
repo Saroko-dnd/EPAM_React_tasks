@@ -1,5 +1,4 @@
 import React from 'react';
-// import Thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';
@@ -11,6 +10,7 @@ import {
     ConnectedRouter,
 } from 'connected-react-router';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import 'bootstrap/scss/bootstrap.scss';
 import './assets/scss/index.scss';
 

@@ -1,0 +1,17 @@
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
+$color-black-with-opacity: rgba(0, 0, 0, 0.75);
+$color-green: rgb(9, 236, 9);
+
+$slider-background-color: transparent;
+$slider-dots-color: $color-white;
+$slider-dots-border-color: $color-black;
+$slider-dots-panel-background-color: none;
+$slider-dots-selected-color: $color-green;
+
+$slider-arrows-color: $color-white;
+$slider-arrows-border-color: $color-white;
+$slider-arrows-background-color: $color-black-with-opacity;
+$slider-arrows-hover-background-color: $color-black;
+
+$slider-status-background-color: $color-black-with-opacity;

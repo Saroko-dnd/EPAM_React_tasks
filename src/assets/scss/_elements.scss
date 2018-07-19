@@ -1,11 +1,11 @@
-p,
-span {
-  font-size: 1rem;
-}
-
 html,
 body {
   height: 100%;
+}
+
+p,
+span {
+  font-size: 1rem;
 }
 
 #ovveride-bootstrap {
@@ -23,39 +23,26 @@ body {
     }
   }
 
-  a {
+  a:not(.url) {
     font-family: $font-links;
-    margin: 0.5rem 0 0.5rem 0;
-    transition: transform 0.5s;
-
-    &:before {
-      content: "< ";
-    }
-
-    &:after {
-      content: " >";
-    }
-
-    &:hover {
-      text-decoration: none;
-      transform: scale(1.5);
-    }
   }
 
   nav {
     a {
-      font-family: $font-site-nav-links;
+      &:not(.navbar-brand) {
+        font-family: $font-site-nav-links;
 
-      &:before {
-        content: "(";
-      }
+        &:before {
+          content: "(";
+        }
 
-      &:after {
-        content: ")";
-      }
+        &:after {
+          content: ")";
+        }
 
-      &:hover {
-        transform: none;
+        &:hover {
+          transform: none;
+        }
       }
     }
   }

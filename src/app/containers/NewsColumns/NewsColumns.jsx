@@ -11,9 +11,9 @@ class NewsColumns extends React.Component {
     }
 
     render() {
-        if (this.props.dataUploaded) {
+        if (this.props.dataDownloaded) {
             return (
-                <section className="news-columns row">
+                <section className="news-columns row justify-content-center align-items-stretch">
                     {this.props.columns}
                 </section>
             );
@@ -31,12 +31,12 @@ NewsColumns.propTypes = {
     newsApiLink: PropTypes.string.isRequired,
     newsApiToken: PropTypes.string.isRequired,
     columns: PropTypes.arrayOf(PropTypes.element),
-    dataUploaded: PropTypes.bool,
+    dataDownloaded: PropTypes.bool,
     loadNews: PropTypes.func.isRequired,
 };
 
 NewsColumns.defaultProps = {
-    dataUploaded: false,
+    dataDownloaded: false,
     columns: [],
 };
 

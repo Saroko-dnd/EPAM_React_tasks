@@ -1,49 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-
-import { navigation } from '../../constants';
 
 import './scss/Article.scss';
 
-const Article = ({ title, articleId, url }) => {
-    let detailsLink;
-    let sourceLink;
-
-    if (articleId) {
-        detailsLink = (
-            <NavLink
-                className="link"
-                to={navigation.newsDetails.destination + articleId}
-                exact
-            >
-                read more
-            </NavLink>
-        );
-    }
-
-    if (url) {
-        sourceLink = <a href={url}>read source</a>;
-    }
+const Article = ({ title, url, imgUrl }) => {
+    const clippedTitle = title.length > 60 ? `${title.slice(0, 61)}...` : title;
 
     return (
-        <article className="news-article d-flex align-items-center flex-column">
-            <h2>{title}</h2>
-            {detailsLink}
-            {sourceLink}
+        <article className="card news-article">
+            {imgUrl ? (
+                <img className="card-img-top" src={imgUrl} alt=":(" />
+            ) : (
+                <span className="fa fa-newspaper-o" />
+            )}
+            <div className="card-body d-flex align-items-center justify-content-end flex-column">
+                <h2 className=" card-title">{clippedTitle}</h2>
+                <a href={url} className="card-link">
+                    read source
+                </a>
+            </div>
         </article>
     );
 };
 
 Article.propTypes = {
     title: PropTypes.string.isRequired,
-    articleId: PropTypes.string,
     url: PropTypes.string,
+    imgUrl: PropTypes.string,
 };
 
 Article.defaultProps = {
-    articleId: null,
     url: null,
+    imgUrl: '',
 };
 
 export default Article;

@@ -2,7 +2,7 @@ import { call, put, takeEvery, select, fork } from 'redux-saga/effects';
 
 import actions from '../actions';
 import createUuidv4 from '../utils/createUuidv4';
-import selectors from '../selectors';
+import { getArticles } from '../selectors';
 import { api, actionTypes } from '../constants';
 
 const fetchNewsData = async (apiRequestLink) => {
@@ -12,13 +12,14 @@ const fetchNewsData = async (apiRequestLink) => {
 };
 
 function* loadRelatedNews(action) {
-    const articles = yield select(selectors.getArticles);
-    const selectedArticle = articles.find(article => article.id === action.payload);
+    const articles = yield select(getArticles);
+    const selectedArticle = articles[action.payload];
     const relatedNewsUrl = `${api.apiAnyNewsLink}q=${
         selectedArticle.title
     }&sortBy=relevancy&pageSize=30&apiKey=${api.apiToken}`;
 
     yield put(actions.selectNewArticle(selectedArticle));
+    yield put(actions.selectNewArticleIndex(action.payload));
 
     yield fork(
         loadNews,

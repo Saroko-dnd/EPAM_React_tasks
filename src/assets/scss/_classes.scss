@@ -1,23 +1,53 @@
 .react-app-site {
-  height: 100%;
-
-  header,
   main {
     margin-bottom: auto;
   }
 
-  > header {
-    @include gradientAnimation(
-      $site-header-background,
-      horizontalLeftGradientAnimation
-    );
+  .site-header {
+    background-color: black;
+    color: white;
   }
 
   > footer {
+    background-color: black;
+    color: white;
     flex-shrink: 0;
-    @include gradientAnimation(
-      $site-footer-background,
-      horizontalRightGradientAnimation
-    );
   }
+}
+
+.news-list {
+  .title {
+    font-family: $font-headers;
+  }
+}
+
+.detailed-news-article {
+  * {
+    font-family: $font-slider-links;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    border-radius: 0;
+    padding: 0;
+    transition: all 0.5s;
+    background-color: $color-header-link-background;
+    color: $color-header-link;
+
+    &.active {
+      background-color: $color-header-active-link-background;
+      color: $color-header-active-link;
+    }
+
+    &:not(.active) {
+      &:hover {
+        color: $color-header-link-hover;
+      }
+    }
+  }
+}
+
+.react-slidedown {
+  width: 100%;
 }
