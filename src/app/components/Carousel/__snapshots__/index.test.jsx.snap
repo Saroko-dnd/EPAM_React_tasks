@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a Carousel should render Carousel correctly 1`] = `
+<div
+  className="carousel-wrapper"
+>
+  <Carousel
+    autoPlay={false}
+    axis="horizontal"
+    centerMode={false}
+    centerSlidePercentage={80}
+    className="d-block"
+    dynamicHeight={false}
+    emulateTouch={false}
+    infiniteLoop={false}
+    interval={3000}
+    onChange={[Function]}
+    onClickItem={[Function]}
+    onClickThumb={[Function]}
+    render={[Function]}
+    selectedItem={0}
+    showArrows={true}
+    showIndicators={true}
+    showStatus={true}
+    showThumbs={false}
+    statusFormatter={[Function]}
+    stopOnHover={true}
+    swipeScrollTolerance={5}
+    swipeable={true}
+    transitionTime={350}
+    useKeyboardArrows={false}
+    verticalSwipe="standard"
+    width="100%"
+  />
+</div>
+`;

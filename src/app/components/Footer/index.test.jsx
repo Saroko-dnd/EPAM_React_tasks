@@ -1,6 +1,8 @@
 import Footer from '.';
 
-test('render a Footer', () => {
-    const wrapper = shallow(<Footer />);
-    expect(wrapper).toMatchSnapshot();
+describe('render a Footer', () => {
+    it('should render Footer correctly', () => {
+        const wrapper = shallow(<Footer />);
+        expect(wrapper).toMatchSnapshot();
+    });
 });

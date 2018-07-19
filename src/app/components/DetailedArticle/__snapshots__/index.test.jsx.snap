@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a DetailedArticle should render DetailedArticle correctly 1`] = `
+<article
+  className="detailed-news-article d-flex align-items-center justify-content-center flex-column"
+  style={
+    Object {
+      "backgroundImage": "url()",
+    }
+  }
+>
+  <div
+    className="news-content"
+  >
+    <h2
+      className="title"
+    />
+    <div
+      className="horizontal-line d-none d-sm-block"
+    />
+    <p
+      className="description d-none d-sm-block"
+    />
+  </div>
+  <div
+    className="place-holder"
+  />
+  <a
+    className="url"
+    href=""
+  >
+    read source
+  </a>
+  <footer
+    className="d-flex align-items-center"
+  >
+    <p>
+      Invalid Date
+    </p>
+    <span />
+    <p
+      className="d-none d-sm-block"
+    />
+  </footer>
+</article>
+`;

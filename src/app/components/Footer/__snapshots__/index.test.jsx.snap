@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render a Footer 1`] = `
+exports[`render a Footer should render Footer correctly 1`] = `
 <footer
   className="card site-footer d-flex align-items-center flex-column"
 >
