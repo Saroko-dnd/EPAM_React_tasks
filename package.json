@@ -4,12 +4,31 @@
     "description": "First training task in AngularJS",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack --mode development ./src/index.jsx --output ./dist/main.js",
-        "build": "webpack --mode production ./src/index.jsx --output ./dist/main.js",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "dev":
+            "webpack --mode development ./src/index.jsx --output ./dist/main.js",
+        "build":
+            "webpack --mode production ./src/index.jsx --output ./dist/main.js",
         "watch": "webpack --watch",
         "start": "webpack-dev-server --open Chrome --mode development",
         "startOpt": "webpack-dev-server --open Chrome --mode production"
+    },
+    "jest": {
+        "setupFiles": ["./src/app/tests/jestsetup.js"],
+        "collectCoverageFrom": ["src/**/*.{ts,js,jsx}"],
+        "snapshotSerializers": ["enzyme-to-json/serializer"],
+        "moduleNameMapper": {
+            "^.+\\.(css|scss)$": "identity-obj-proxy"
+        },
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        },
+        "globals": {
+            "__DEV__": true,
+            "__RCTProfileIsProfiling": false
+        }
     },
     "keywords": [],
     "author": "Ihar Saroka (Junior Software Engineer in EPAM)",
@@ -17,6 +36,7 @@
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.2.3",
+        "babel-jest": "^23.4.0",
         "babel-loader": "^7.1.4",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -24,20 +44,28 @@
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "css-loader": "^0.28.11",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "enzyme-to-json": "^3.3.4",
         "eslint": "^4.19.1",
         "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-jest-enzyme": "^6.0.2",
         "eslint-loader": "^2.0.0",
         "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-jest": "^21.18.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.9.1",
         "eslint-plugin-react-redux": "^2.3.0",
         "file-loader": "^1.1.11",
         "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.2.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^23.4.1",
         "mini-css-extract-plugin": "^0.4.0",
         "node-sass": "^4.8.3",
         "optimize-css-assets-webpack-plugin": "^4.0.0",
         "prettier-eslint": "^8.8.1",
+        "react-test-renderer": "^16.4.1",
         "sass-loader": "^7.0.1",
         "uglifyjs-webpack-plugin": "^1.2.4",
         "webpack": "^4.5.0",
