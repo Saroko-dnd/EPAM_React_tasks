@@ -7,20 +7,24 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
-        "dev":
-            "webpack --mode development ./src/index.jsx --output ./dist/main.js",
-        "build":
-            "webpack --mode production ./src/index.jsx --output ./dist/main.js",
+        "dev": "webpack --mode development ./src/index.jsx --output ./dist/main.js",
+        "build": "webpack --mode production ./src/index.jsx --output ./dist/main.js",
         "watch": "webpack --watch",
         "start": "webpack-dev-server --open Chrome --mode development",
         "startOpt": "webpack-dev-server --open Chrome --mode production"
     },
     "jest": {
         "verbose": true,
-        "setupFiles": ["./src/app/tests/jestsetup.js"],
+        "setupFiles": [
+            "./src/app/tests/jestsetup.js"
+        ],
         "setupTestFrameworkScriptFile": "jest-extended",
-        "collectCoverageFrom": ["src/**/*.{ts,js,jsx}"],
-        "snapshotSerializers": ["enzyme-to-json/serializer"],
+        "collectCoverageFrom": [
+            "src/**/*.{ts,js,jsx}"
+        ],
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
         "moduleNameMapper": {
             "^.+\\.(css|scss)$": "identity-obj-proxy",
             "\\.(svg)$": "<rootDir>/src/app/tests/mocks/fileMock.js"
@@ -74,6 +78,7 @@
         "node-sass": "^4.8.3",
         "optimize-css-assets-webpack-plugin": "^4.0.0",
         "prettier-eslint": "^8.8.1",
+        "react-router-enzyme-context": "^1.2.0",
         "react-test-renderer": "^16.4.1",
         "sass-loader": "^7.0.1",
         "uglifyjs-webpack-plugin": "^1.2.4",

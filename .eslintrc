@@ -19,6 +19,7 @@
             {
                 "devDependencies": [
                     "**/*.test.js",
+                    "**/*.test.jsx",
                     "**/*.spec.js",
                     "**/jestsetup.js"
                 ]

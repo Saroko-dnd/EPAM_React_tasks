@@ -1,8 +1,14 @@
+import ReactRouterEnzymeContext from 'react-router-enzyme-context';
+
 import Header from './index';
 
 describe('render an Header', () => {
+    const options = new ReactRouterEnzymeContext();
     const onClickEventHandler = jest.fn();
-    const header = shallow(<Header navMenuIsOpened={false} toggleNavLinks={onClickEventHandler} />);
+    const header = mount(
+        <Header navMenuIsOpened={false} toggleNavLinks={onClickEventHandler} />,
+        options.get(),
+    );
 
     it('should render Header correctly', () => {
         expect(header).toMatchSnapshot();
