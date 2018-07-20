@@ -7,6 +7,11 @@ describe('render a Carousel', () => {
         expect(slider).toMatchSnapshot();
     });
 
+    it('should have correct default props', () => {
+        expect(slider.instance().props.elements).toBeArray();
+        expect(slider.instance().props.elements).toHaveLength(0);
+    });
+
     it('Carousel should not be updated if it has some elements', () => {
         const sliderWithElements = shallow(<Carousel
             elements={[
