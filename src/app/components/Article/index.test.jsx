@@ -22,16 +22,19 @@ describe('render an Article', () => {
     });
 
     it('should render image if imgUrl passed ', () => {
-        const articleWithImgUrl = shallow(<Article title="" imgUrl="src/image" />);
-        const img = articleWithImgUrl.find('img.card-img-top');
+        let img = null;
 
-        expect(articleWithImgUrl.find('span.fa.fa-newspaper-o').exists()).toEqual(false);
+        article.setProps({ imgUrl: 'src/image' });
+        img = article.find('img.card-img-top');
+
+        expect(article.find('span.fa.fa-newspaper-o').exists()).toEqual(false);
         expect(img.exists()).toEqual(true);
         expect(img.prop('src')).toEqual('src/image');
     });
 
     it('should not crop short titles', () => {
-        const articleWithShortTitle = shallow(<Article title="Lorem ipsum, dolor sit amet." />);
-        expect(articleWithShortTitle.find('.card-title').text()).toEqual('Lorem ipsum, dolor sit amet.');
+        article.setProps({ title: 'Lorem ipsum, dolor sit amet.' });
+
+        expect(article.find('.card-title').text()).toEqual('Lorem ipsum, dolor sit amet.');
     });
 });

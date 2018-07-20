@@ -12,22 +12,22 @@ describe('render a Carousel', () => {
         expect(slider.instance().props.elements).toHaveLength(0);
     });
 
-    it('Carousel should not be updated if it has some elements', () => {
-        const sliderWithElements = shallow(<Carousel
-            elements={[
-                <p key={1}>text 1</p>,
-                <p key={2}>text 2</p>,
-                <p key={3}>text 3</p>,
-            ]}
-            onChange={() => {}}
-        />).instance();
-
-        expect(sliderWithElements.shouldComponentUpdate()).toEqual(false);
+    it('Carousel should be updated if it is empty', () => {
+        expect(slider.instance().shouldComponentUpdate()).toEqual(true);
     });
 
-    it('Carousel should be updated if it is empty', () => {
-        const sliderWithoutElements = shallow(<Carousel onChange={() => {}} />).instance();
+    it('Carousel should not be updated if it has some elements', () => {
+        slider.setProps(
+            {
+                elements: [
+                    <p key={1}>text 1</p>,
+                    <p key={2}>text 2</p>,
+                    <p key={3}>text 3</p>,
+                ],
+            },
+            { onChange: () => {} },
+        );
 
-        expect(sliderWithoutElements.shouldComponentUpdate()).toEqual(true);
+        expect(slider.instance().shouldComponentUpdate()).toEqual(false);
     });
 });
