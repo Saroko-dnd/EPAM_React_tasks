@@ -16,6 +16,7 @@
         "startOpt": "webpack-dev-server --open Chrome --mode production"
     },
     "jest": {
+        "verbose": true,
         "setupFiles": ["./src/app/tests/jestsetup.js"],
         "collectCoverageFrom": ["src/**/*.{ts,js,jsx}"],
         "snapshotSerializers": ["enzyme-to-json/serializer"],
@@ -27,6 +28,9 @@
             "^.+\\.jsx?$": "babel-jest",
             "^.+\\.svg$": "jest-svg-transformer"
         },
+        "transformIgnorePatterns": [
+            "node_modules/(?!(react-svg-icons-by-igor-saroko)/).*"
+        ],
         "globals": {
             "__DEV__": true,
             "__RCTProfileIsProfiling": false

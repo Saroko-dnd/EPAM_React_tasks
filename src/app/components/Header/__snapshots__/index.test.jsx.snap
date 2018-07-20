@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render an Header should render Header correctly 1`] = `
+<div
+  className="site-header d-flex align-items-center flex-column"
+>
+  <div
+    className="d-flex align-items-center"
+  >
+    <span>
+      <NewsIcon
+        className="site-header-icon"
+        height={150}
+        width={150}
+      />
+    </span>
+    <h1>
+      News from all over the world
+    </h1>
+    <button
+      className="nav-menu-button d-block d-lg-none"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-bars"
+      />
+    </button>
+  </div>
+  <SlideDown
+    className="animation-lg-disabled"
+  >
+    <NavigationPanel
+      className="site-header-navigation d-lg-flex d-none"
+      navLinksCallback={[Function]}
+      navigationLinks={
+        Array [
+          Object {
+            "destination": "/",
+            "id": "nav-link-1",
+            "isActive": [Function],
+            "title": "Top news",
+          },
+          Object {
+            "destination": "/details",
+            "id": "nav-link-5",
+            "isActive": null,
+            "title": "Detailed news",
+          },
+          Object {
+            "destination": "/second",
+            "id": "nav-link-3",
+            "isActive": null,
+            "title": "Super news",
+          },
+          Object {
+            "destination": "/third",
+            "id": "nav-link-4",
+            "isActive": null,
+            "title": "Mega news",
+          },
+        ]
+      }
+    />
+  </SlideDown>
+</div>
+`;
