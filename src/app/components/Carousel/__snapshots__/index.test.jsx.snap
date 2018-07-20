@@ -17,7 +17,6 @@ exports[`render a Carousel should render Carousel correctly 1`] = `
     onChange={[Function]}
     onClickItem={[Function]}
     onClickThumb={[Function]}
-    render={[Function]}
     selectedItem={0}
     showArrows={true}
     showIndicators={true}
