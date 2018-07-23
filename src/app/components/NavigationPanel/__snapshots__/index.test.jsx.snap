@@ -7,16 +7,12 @@ exports[`render a NavigationPanel should render NavigationPanel correctly 1`] = 
   navigationLinks={
     Array [
       Object {
-        "destination": "new destination 1",
+        "destination": "destination 1",
         "id": 1,
-        "isActive": null,
-        "title": "new title 1",
       },
       Object {
-        "destination": "new destination 2",
+        "destination": "destination 2",
         "id": 2,
-        "isActive": null,
-        "title": "new title 2",
       },
     ]
   }
@@ -29,30 +25,27 @@ exports[`render a NavigationPanel should render NavigationPanel correctly 1`] = 
       aria-current="page"
       className="nav-item nav-link"
       exact={true}
-      isActive={null}
       key="1"
       onClick={[Function]}
-      to="new destination 1"
+      to="destination 1"
     >
       <Route
         exact={true}
-        path="new destination 1"
+        path="destination 1"
       >
         <Link
           aria-current={null}
           className="nav-item nav-link"
           onClick={[Function]}
           replace={false}
-          to="new destination 1"
+          to="destination 1"
         >
           <a
             aria-current={null}
             className="nav-item nav-link"
-            href="/new destination 1"
+            href="/destination 1"
             onClick={[Function]}
-          >
-            new title 1
-          </a>
+          />
         </Link>
       </Route>
     </NavLink>
@@ -61,30 +54,27 @@ exports[`render a NavigationPanel should render NavigationPanel correctly 1`] = 
       aria-current="page"
       className="nav-item nav-link"
       exact={true}
-      isActive={null}
       key="2"
       onClick={[Function]}
-      to="new destination 2"
+      to="destination 2"
     >
       <Route
         exact={true}
-        path="new destination 2"
+        path="destination 2"
       >
         <Link
           aria-current={null}
           className="nav-item nav-link"
           onClick={[Function]}
           replace={false}
-          to="new destination 2"
+          to="destination 2"
         >
           <a
             aria-current={null}
             className="nav-item nav-link"
-            href="/new destination 2"
+            href="/destination 2"
             onClick={[Function]}
-          >
-            new title 2
-          </a>
+          />
         </Link>
       </Route>
     </NavLink>

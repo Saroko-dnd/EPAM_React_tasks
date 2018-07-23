@@ -8,15 +8,11 @@ describe('render a NavigationPanel', () => {
     const navLinks = [
         {
             id: 1,
-            destination: 'new destination 1',
-            title: 'new title 1',
-            isActive: null,
+            destination: 'destination 1',
         },
         {
             id: 2,
-            destination: 'new destination 2',
-            title: 'new title 2',
-            isActive: null,
+            destination: 'destination 2',
         },
     ];
     const navigationPanel = mount(
