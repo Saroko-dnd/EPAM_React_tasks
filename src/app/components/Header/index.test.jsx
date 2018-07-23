@@ -14,11 +14,11 @@ describe('render an Header', () => {
         expect(header).toMatchSnapshot();
     });
 
-    it('should make naigation panel invisible if property navMenuIsOpened set to false', () => {
+    it('should make navigation panel invisible if property navMenuIsOpened set to false', () => {
         expect(header.find('.site-header-navigation.d-flex').exists()).toEqual(false);
     });
 
-    it('should make naigation panel visible if property navMenuIsOpened set to true', () => {
+    it('should make navigation panel visible if property navMenuIsOpened set to true', () => {
         header.setProps({ navMenuIsOpened: true });
         expect(header.find('.site-header-navigation.d-flex').exists()).toEqual(true);
     });
