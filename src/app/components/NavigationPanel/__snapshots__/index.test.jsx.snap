@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a NavigationPanel should render NavigationPanel correctly 1`] = `
+<NavigationPanel
+  className=""
+  navLinksCallback={[MockFunction]}
+  navigationLinks={
+    Array [
+      Object {
+        "destination": "new destination 1",
+        "id": 1,
+        "isActive": null,
+        "title": "new title 1",
+      },
+      Object {
+        "destination": "new destination 2",
+        "id": 2,
+        "isActive": null,
+        "title": "new title 2",
+      },
+    ]
+  }
+>
+  <nav
+    className="navigation-panel flex-column flex-lg-row align-self-stretch nav nav-pills justify-content-center align-items-center "
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="nav-item nav-link"
+      exact={true}
+      isActive={null}
+      key="1"
+      onClick={[Function]}
+      to="new destination 1"
+    >
+      <Route
+        exact={true}
+        path="new destination 1"
+      >
+        <Link
+          aria-current={null}
+          className="nav-item nav-link"
+          onClick={[Function]}
+          replace={false}
+          to="new destination 1"
+        >
+          <a
+            aria-current={null}
+            className="nav-item nav-link"
+            href="/new destination 1"
+            onClick={[Function]}
+          >
+            new title 1
+          </a>
+        </Link>
+      </Route>
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="nav-item nav-link"
+      exact={true}
+      isActive={null}
+      key="2"
+      onClick={[Function]}
+      to="new destination 2"
+    >
+      <Route
+        exact={true}
+        path="new destination 2"
+      >
+        <Link
+          aria-current={null}
+          className="nav-item nav-link"
+          onClick={[Function]}
+          replace={false}
+          to="new destination 2"
+        >
+          <a
+            aria-current={null}
+            className="nav-item nav-link"
+            href="/new destination 2"
+            onClick={[Function]}
+          >
+            new title 2
+          </a>
+        </Link>
+      </Route>
+    </NavLink>
+  </nav>
+</NavigationPanel>
+`;
