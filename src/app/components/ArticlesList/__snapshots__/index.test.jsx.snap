@@ -1,20 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render an ArticleList should render ArticleList correctly 1`] = `
-<ArticlesList
-  articles={Array []}
-  className=""
-  title=""
+<div
+  className="news-list "
 >
+  <h2
+    className="title"
+  />
   <div
-    className="news-list "
-  >
-    <h2
-      className="title"
-    />
-    <div
-      className="d-flex justify-content-center align-items-center flex-wrap justify-content-center"
-    />
-  </div>
-</ArticlesList>
+    className="d-flex justify-content-center align-items-center flex-wrap justify-content-center"
+  />
+</div>
 `;

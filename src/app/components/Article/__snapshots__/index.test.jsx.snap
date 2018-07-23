@@ -1,32 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render an Article should render Article correctly 1`] = `
-<Article
-  imgUrl=""
-  title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat aspernatur."
-  url={null}
+<article
+  className="card news-article"
 >
-  <article
-    className="card news-article"
+  <span
+    className="fa fa-newspaper-o"
+  />
+  <div
+    className="card-body d-flex align-items-center justify-content-end flex-column"
   >
-    <span
-      className="fa fa-newspaper-o"
-    />
-    <div
-      className="card-body d-flex align-items-center justify-content-end flex-column"
+    <h2
+      className=" card-title"
     >
-      <h2
-        className=" card-title"
-      >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qua...
-      </h2>
-      <a
-        className="card-link"
-        href={null}
-      >
-        read source
-      </a>
-    </div>
-  </article>
-</Article>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qua...
+    </h2>
+    <a
+      className="card-link"
+      href={null}
+    >
+      read source
+    </a>
+  </div>
+</article>
 `;

@@ -13,8 +13,4 @@ describe('render an DetailedNewsArticles container component', () => {
     it('should render DetailedNewsArticles correctly', () => {
         expect(detailedNewsArticlesWrapper).toMatchSnapshot();
     });
-
-    /* it('should have correct default props', () => {
-
-    }); */
 });

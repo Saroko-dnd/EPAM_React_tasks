@@ -7,11 +7,6 @@ describe('render a Carousel', () => {
         expect(slider).toMatchSnapshot();
     });
 
-    it('should have correct default props', () => {
-        expect(slider.instance().props.elements).toBeArray();
-        expect(slider.instance().props.elements).toHaveLength(0);
-    });
-
     it('Carousel should be updated if it is empty', () => {
         expect(slider.instance().shouldComponentUpdate()).toEqual(true);
     });

@@ -1,15 +1,10 @@
 import Article from '.';
 
 describe('render an Article', () => {
-    const article = mount(<Article title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat aspernatur." />);
+    const article = shallow(<Article title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat aspernatur." />);
 
     it('should render Article correctly', () => {
         expect(article).toMatchSnapshot();
-    });
-
-    it('should have correct default props', () => {
-        expect(article.prop('url')).toEqual(null);
-        expect(article.prop('imgUrl')).toEqual('');
     });
 
     it('should crop long titles', () => {
