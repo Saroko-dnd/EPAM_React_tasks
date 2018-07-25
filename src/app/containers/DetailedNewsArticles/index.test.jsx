@@ -146,17 +146,22 @@ describe('DetailedNewsArticles container component', () => {
             });
         });
 
-        it(`should return object with function loadNews that should dispatch LOAD_NEWS action with passed url and  ${
-            actionTypes.TOP_NEWS_DOWNLOADED
-        } action type as payload`, () => {
-            mapDispatchToProps(dispatch).loadNews(testApiUrl);
-            expect(dispatch).toBeCalledWith({
-                type: actionTypes.LOAD_NEWS,
-                payload: {
-                    apiLink: testApiUrl,
-                    downloadedActionType: actionTypes.TOP_NEWS_DOWNLOADED,
-                },
-            });
-        });
+        it(
+            `should return object with function loadNews that should dispatch ${
+                actionTypes.LOAD_NEWS
+            } action with passed url and  ${
+                actionTypes.TOP_NEWS_DOWNLOADED
+            } action type as payload`,
+            () => {
+                mapDispatchToProps(dispatch).loadNews(testApiUrl);
+                expect(dispatch).toBeCalledWith({
+                    type: actionTypes.LOAD_NEWS,
+                    payload: {
+                        apiLink: testApiUrl,
+                        downloadedActionType: actionTypes.TOP_NEWS_DOWNLOADED,
+                    },
+                });
+            },
+        );
     });
 });

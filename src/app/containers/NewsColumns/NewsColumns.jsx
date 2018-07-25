@@ -30,9 +30,9 @@ class NewsColumns extends React.Component {
 NewsColumns.propTypes = {
     newsApiLink: PropTypes.string.isRequired,
     newsApiToken: PropTypes.string.isRequired,
+    loadNews: PropTypes.func.isRequired,
     columns: PropTypes.arrayOf(PropTypes.element),
     dataDownloaded: PropTypes.bool,
-    loadNews: PropTypes.func.isRequired,
 };
 
 NewsColumns.defaultProps = {
