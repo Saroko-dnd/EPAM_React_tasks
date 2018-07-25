@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render an DetailedNewsArticles container component should render DetailedNewsArticles correctly 1`] = `
+exports[`DetailedNewsArticles container component rendering and behavior should render DetailedNewsArticles correctly 1`] = `
 <section
   className="d-flex align-items-center justify-content-center flex-column"
 >
