@@ -26,6 +26,14 @@
             }
         ]
     },
+    "overrides": [
+        {
+            "files": ["*.test.js", "*.test.jsx"],
+            "rules": {
+                "react-redux/mapStateToProps-prefer-hoisted": "off"
+            }
+        }
+    ],
     "extends": [
         "airbnb",
         "plugin:react-redux/recommended",

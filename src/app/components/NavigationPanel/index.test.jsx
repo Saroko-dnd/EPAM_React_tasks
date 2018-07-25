@@ -15,7 +15,7 @@ describe('render a NavigationPanel', () => {
             destination: 'destination 2',
         },
     ];
-    const navigationPanel = mount(
+    const navigationPanel = shallow(
         <NavigationPanel
             navLinksCallback={clickEventHandler}
             navigationLinks={navLinks}
@@ -25,10 +25,6 @@ describe('render a NavigationPanel', () => {
 
     it('should render NavigationPanel correctly', () => {
         expect(navigationPanel).toMatchSnapshot();
-    });
-
-    it('should have correct default props', () => {
-        expect(navigationPanel.prop('className')).toEqual('');
     });
 
     it('should call function passed as navLinksCallback if one of the links was clicked', () => {

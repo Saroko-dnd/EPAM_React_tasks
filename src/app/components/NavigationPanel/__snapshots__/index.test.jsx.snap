@@ -1,83 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render a NavigationPanel should render NavigationPanel correctly 1`] = `
-<NavigationPanel
-  className=""
-  navLinksCallback={[MockFunction]}
-  navigationLinks={
-    Array [
-      Object {
-        "destination": "destination 1",
-        "id": 1,
-      },
-      Object {
-        "destination": "destination 2",
-        "id": 2,
-      },
-    ]
-  }
+<nav
+  className="navigation-panel flex-column flex-lg-row align-self-stretch nav nav-pills justify-content-center align-items-center "
 >
-  <nav
-    className="navigation-panel flex-column flex-lg-row align-self-stretch nav nav-pills justify-content-center align-items-center "
-  >
-    <NavLink
-      activeClassName="active"
-      aria-current="page"
-      className="nav-item nav-link"
-      exact={true}
-      key="1"
-      onClick={[Function]}
-      to="destination 1"
-    >
-      <Route
-        exact={true}
-        path="destination 1"
-      >
-        <Link
-          aria-current={null}
-          className="nav-item nav-link"
-          onClick={[Function]}
-          replace={false}
-          to="destination 1"
-        >
-          <a
-            aria-current={null}
-            className="nav-item nav-link"
-            href="/destination 1"
-            onClick={[Function]}
-          />
-        </Link>
-      </Route>
-    </NavLink>
-    <NavLink
-      activeClassName="active"
-      aria-current="page"
-      className="nav-item nav-link"
-      exact={true}
-      key="2"
-      onClick={[Function]}
-      to="destination 2"
-    >
-      <Route
-        exact={true}
-        path="destination 2"
-      >
-        <Link
-          aria-current={null}
-          className="nav-item nav-link"
-          onClick={[Function]}
-          replace={false}
-          to="destination 2"
-        >
-          <a
-            aria-current={null}
-            className="nav-item nav-link"
-            href="/destination 2"
-            onClick={[Function]}
-          />
-        </Link>
-      </Route>
-    </NavLink>
-  </nav>
-</NavigationPanel>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-item nav-link"
+    exact={true}
+    key="1"
+    onClick={[Function]}
+    to="destination 1"
+  />
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-item nav-link"
+    exact={true}
+    key="2"
+    onClick={[Function]}
+    to="destination 2"
+  />
+</nav>
 `;
