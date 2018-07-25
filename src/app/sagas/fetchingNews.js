@@ -28,7 +28,7 @@ function* loadRelatedNews(action) {
 }
 
 function* loadNews(action) {
-    const newsUploadedActionType = action.payload.uploadedActionType;
+    const newsDownloadedActionType = action.payload.downloadedActionType;
     let newsData = null;
 
     yield put(actions.newsIsLoading(true));
@@ -41,9 +41,11 @@ function* loadNews(action) {
 
     yield put(actions.newsIsLoading(false));
 
-    if (newsUploadedActionType === actionTypes.TOP_NEWS_DOWNLOADED) {
+    if (newsDownloadedActionType === actionTypes.TOP_NEWS_DOWNLOADED) {
         yield put(actions.newsDownloaded(newsData.articles));
-    } else if (newsUploadedActionType === actionTypes.RELATED_NEWS_DOWNLOADED) {
+    } else if (
+        newsDownloadedActionType === actionTypes.RELATED_NEWS_DOWNLOADED
+    ) {
         yield put(actions.relatedNewsDownloaded(newsData.articles));
     }
 }
