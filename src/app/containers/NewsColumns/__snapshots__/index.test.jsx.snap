@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsColumns container component mapStateToProps should return object with array of components for news columns 1`] = `
+exports[`NewsColumns container component mapStateToProps should return object with array of ArticlesList components for news columns 1`] = `
 Array [
   <ArticlesList
     articles={

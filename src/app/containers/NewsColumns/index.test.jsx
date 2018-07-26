@@ -70,7 +70,7 @@ describe('NewsColumns container component', () => {
 
         it(`should return object with function loadNews that should dispatch ${
             actionTypes.LOAD_NEWS
-        } action with passed api url and${
+        } action with passed api url and ${
             actionTypes.TOP_NEWS_DOWNLOADED
         } action type as payload`, () => {
             mapDispatchToProps(fakeDispatch).loadNews(fakeApiUrl);
