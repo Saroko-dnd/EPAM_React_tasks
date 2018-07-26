@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteHeader container component rendering and behavior should render SiteHeader correctly 1`] = `
+<header>
+  <Header
+    navMenuIsOpened={false}
+    toggleNavLinks={[MockFunction]}
+  />
+</header>
+`;
