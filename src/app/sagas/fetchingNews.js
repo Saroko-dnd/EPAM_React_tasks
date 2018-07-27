@@ -1,7 +1,6 @@
 import { call, put, takeEvery, select, fork } from 'redux-saga/effects';
 
 import actions from '../actions';
-import createUuidv4 from '../utils/createUuidv4';
 import { getArticles } from '../selectors';
 import { api, actionTypes } from '../constants';
 
@@ -34,10 +33,6 @@ function* loadNews(action) {
     yield put(actions.newsIsLoading(true));
 
     newsData = yield call(fetchNewsData, [action.payload.apiLink]);
-
-    newsData.articles.forEach((article) => {
-        article.id = createUuidv4();
-    });
 
     yield put(actions.newsIsLoading(false));
 
