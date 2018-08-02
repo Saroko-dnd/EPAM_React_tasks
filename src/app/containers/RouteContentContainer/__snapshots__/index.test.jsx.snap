@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteContentContainer component (routing test) rendering and behavior should render "Route 3" message if path = "/second" 1`] = `
+<main>
+  <h1>
+    Route 3
+  </h1>
+</main>
+`;
+
+exports[`RouteContentContainer component (routing test) rendering and behavior should render "Route 4" message if path = "/third" 1`] = `
+<main>
+  <h1>
+    Route 4
+  </h1>
+</main>
+`;
+
+exports[`RouteContentContainer component (routing test) rendering and behavior should render slider with detailed news and news related to the selected news if path = "/details" 1`] = `
+<main>
+  <section
+    class="d-flex align-items-center justify-content-center flex-column"
+  >
+    <div
+      class="carousel-wrapper"
+    />
+    <div
+      class="news-list "
+    >
+      <h2
+        class="title"
+      >
+        Related news
+      </h2>
+      <div
+        class="d-flex justify-content-center align-items-center flex-wrap justify-content-center"
+      />
+    </div>
+  </section>
+</main>
+`;
+
+exports[`RouteContentContainer component (routing test) rendering and behavior should render top news columns if path = "/" 1`] = `
+<main>
+  <div
+    class=" container-fluid"
+  >
+    <section
+      class="news-columns row justify-content-center align-items-stretch"
+    />
+  </div>
+</main>
+`;

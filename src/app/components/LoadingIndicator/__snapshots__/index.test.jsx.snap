@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a LoadingIndicator should render LoadingIndicator correctly 1`] = `
+<LoadingIndicator
+  color="#009900"
+  message="Loading..."
+  size={150}
+>
+  <div
+    className="loading-indicator d-flex flex-column align-items-center"
+  >
+    <onlyUpdateForKeys(Loader)
+      color="#009900"
+      loading={true}
+      size={150}
+      sizeUnit="px"
+    >
+      <Loader
+        color="#009900"
+        loading={true}
+        size={150}
+        sizeUnit="px"
+      >
+        <div
+          className="css-d7h8wz"
+        >
+          <div
+            className="css-1dil71f"
+          />
+          <div
+            className="css-18gpygh"
+          />
+        </div>
+      </Loader>
+    </onlyUpdateForKeys(Loader)>
+    <span>
+      Loading...
+    </span>
+  </div>
+</LoadingIndicator>
+`;

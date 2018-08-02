@@ -48,12 +48,12 @@ class DetailedNewsArticles extends React.Component {
 }
 
 DetailedNewsArticles.propTypes = {
-    dataDownloaded: PropTypes.bool,
+    loadRelatedNews: PropTypes.func.isRequired,
     newsApiLink: PropTypes.string.isRequired,
     newsApiToken: PropTypes.string.isRequired,
     loadNews: PropTypes.func.isRequired,
+    dataDownloaded: PropTypes.bool,
     relatedArticles: PropTypes.arrayOf(customPropsTypes.article),
-    loadRelatedNews: PropTypes.func.isRequired,
     detailedArticles: PropTypes.arrayOf(PropTypes.element),
 };
 

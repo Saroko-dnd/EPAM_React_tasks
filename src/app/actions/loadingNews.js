@@ -9,9 +9,9 @@ const {
     loadNews,
     loadRelatedNews,
 } = createActions({
-    [actionTypes.LOAD_NEWS]: (apiLink, uploadedActionType) => ({
+    [actionTypes.LOAD_NEWS]: (apiLink, downloadedActionType) => ({
         apiLink,
-        uploadedActionType,
+        downloadedActionType,
     }),
     [actionTypes.NEWS_IS_LOADING]: undefined,
     [actionTypes.LOAD_RELATED_NEWS]: undefined,

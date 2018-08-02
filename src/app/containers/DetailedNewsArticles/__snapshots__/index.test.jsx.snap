@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedNewsArticles container component rendering and behavior should render DetailedNewsArticles correctly 1`] = `
+<section
+  className="d-flex align-items-center justify-content-center flex-column"
+>
+  <CustomCarousel
+    elements={Array []}
+    onChange={[Function]}
+  />
+  <LoadingIndicator
+    color="#009900"
+    message="Loading related news..."
+    size={150}
+  />
+</section>
+`;

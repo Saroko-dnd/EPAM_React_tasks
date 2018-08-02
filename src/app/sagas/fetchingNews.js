@@ -1,7 +1,6 @@
 import { call, put, takeEvery, select, fork } from 'redux-saga/effects';
 
 import actions from '../actions';
-import createUuidv4 from '../utils/createUuidv4';
 import { getArticles } from '../selectors';
 import { api, actionTypes } from '../constants';
 
@@ -28,22 +27,20 @@ function* loadRelatedNews(action) {
 }
 
 function* loadNews(action) {
-    const newsUploadedActionType = action.payload.uploadedActionType;
+    const newsDownloadedActionType = action.payload.downloadedActionType;
     let newsData = null;
 
     yield put(actions.newsIsLoading(true));
 
     newsData = yield call(fetchNewsData, [action.payload.apiLink]);
 
-    newsData.articles.forEach((article) => {
-        article.id = createUuidv4();
-    });
-
     yield put(actions.newsIsLoading(false));
 
-    if (newsUploadedActionType === actionTypes.TOP_NEWS_DOWNLOADED) {
+    if (newsDownloadedActionType === actionTypes.TOP_NEWS_DOWNLOADED) {
         yield put(actions.newsDownloaded(newsData.articles));
-    } else if (newsUploadedActionType === actionTypes.RELATED_NEWS_DOWNLOADED) {
+    } else if (
+        newsDownloadedActionType === actionTypes.RELATED_NEWS_DOWNLOADED
+    ) {
         yield put(actions.relatedNewsDownloaded(newsData.articles));
     }
 }

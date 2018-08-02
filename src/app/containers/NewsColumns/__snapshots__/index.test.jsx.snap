@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsColumns container component mapStateToProps should return object with array of ArticlesList components for news columns 1`] = `
+Array [
+  <ArticlesList
+    articles={
+      Array [
+        Object {
+          "title": "article_1",
+        },
+        Object {
+          "title": "article_2",
+        },
+        Object {
+          "title": "article_3",
+        },
+        Object {
+          "title": "article_4",
+        },
+        Object {
+          "title": "article_5",
+        },
+      ]
+    }
+    className="col-xl-3 col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-around"
+    linksToDetails={true}
+    title=""
+  />,
+  <ArticlesList
+    articles={
+      Array [
+        Object {
+          "title": "article_6",
+        },
+        Object {
+          "title": "article_7",
+        },
+        Object {
+          "title": "article_8",
+        },
+        Object {
+          "title": "article_9",
+        },
+        Object {
+          "title": "article_10",
+        },
+      ]
+    }
+    className="col-xl-3 col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-around"
+    linksToDetails={true}
+    title=""
+  />,
+  <ArticlesList
+    articles={
+      Array [
+        Object {
+          "title": "article_11",
+        },
+        Object {
+          "title": "article_12",
+        },
+        Object {
+          "title": "article_13",
+        },
+        Object {
+          "title": "article_14",
+        },
+        Object {
+          "title": "article_15",
+        },
+      ]
+    }
+    className="col-xl-3 col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-around"
+    linksToDetails={true}
+    title=""
+  />,
+]
+`;
+
+exports[`NewsColumns container component rendering and behavior should render loading indicator if property dataDownloaded set to false 1`] = `
+<section
+  className="news-columns"
+>
+  <LoadingIndicator
+    color="#009900"
+    message="Loading news..."
+    size={150}
+  />
+</section>
+`;
+
+exports[`NewsColumns container component rendering and behavior should render news columns if property dataDownloaded set to true  1`] = `
+<section
+  className="news-columns row justify-content-center align-items-stretch"
+>
+  <span
+    id="column_1"
+    key="1"
+  />
+  <span
+    id="column_2"
+    key="2"
+  />
+  <span
+    id="column_3"
+    key="3"
+  />
+</section>
+`;
