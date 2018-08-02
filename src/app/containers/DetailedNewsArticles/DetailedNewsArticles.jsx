@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Carousel from '../../components/Carousel';
 
 import ArticlesList from '../../components/ArticlesList';
+import DetailedArticle from '../../components/DetailedArticle';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import { customPropsTypes } from '../../constants';
 
@@ -31,7 +32,12 @@ class DetailedNewsArticles extends React.Component {
                     onChange={(index) => {
                         this.props.loadRelatedNews(index);
                     }}
-                    elements={this.props.detailedArticles}
+                    elements={this.props.detailedArticles.map(foundArticle => (
+                        <DetailedArticle
+                            article={foundArticle}
+                            key={foundArticle.url}
+                        />
+                    ))}
                 />
                 {this.props.dataDownloaded ? (
                     <ArticlesList

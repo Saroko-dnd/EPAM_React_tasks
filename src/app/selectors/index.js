@@ -2,4 +2,4 @@ export {
     getRelatedArticles,
     getUniqueRelatedArticles,
 } from './articlesRelatedToSelected';
-export { getArticles, getDetailedArticles } from './articles';
+export { default as getArticles } from './articles';

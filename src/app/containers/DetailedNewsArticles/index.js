@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import actions from '../../actions';
 import DetailedNewsArticles from './DetailedNewsArticles';
 import { actionTypes } from '../../constants';
-import { getUniqueRelatedArticles, getDetailedArticles } from '../../selectors';
+import { getUniqueRelatedArticles } from '../../selectors';
 
 const mapStateToProps = state => ({
     relatedArticles: getUniqueRelatedArticles(state),
-    detailedArticles: getDetailedArticles(state),
+    detailedArticles: state.articles,
     selectedArticleIndex: state.selectedArticleIndex,
     dataDownloaded: !state.newsIsLoading,
 });
