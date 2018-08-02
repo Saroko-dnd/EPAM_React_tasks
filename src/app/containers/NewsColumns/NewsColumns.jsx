@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LoadingIndicator from '../../components/LoadingIndicator';
+import ArticlesList from '../../components/ArticlesList';
 
 class NewsColumns extends React.Component {
     componentDidMount() {
@@ -14,7 +15,14 @@ class NewsColumns extends React.Component {
         if (this.props.dataDownloaded) {
             return (
                 <section className="news-columns row justify-content-center align-items-stretch">
-                    {this.props.columns}
+                    {this.props.columns.map(foundArticles => (
+                        <ArticlesList
+                            className="col-xl-3 col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-around"
+                            key={foundArticles[0].url}
+                            articles={foundArticles}
+                            linksToDetails
+                        />
+                    ))}
                 </section>
             );
         }
